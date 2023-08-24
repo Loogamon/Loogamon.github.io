@@ -1,0 +1,308 @@
+{
+	"digimon":
+	[
+		[
+			{
+				"name": "Pururumon",
+				"image": {
+					"sprite": "spr_pururumon.png",
+					"art": "art_pururumon.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Poromon",
+				"image": {
+					"sprite": "spr_poromon.png",
+					"art": "art_poromon.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Falcomon",
+				"image": {
+					"sprite": "spr_falcomon_savers.png",
+					"art": "art_falcomon_savers.jpg"
+				}
+			},
+			{
+				"name": "Pomumon",
+				"image": {
+					"sprite": "spr_pomumon.png",
+					"art": "art_pomumon.jpg"
+				}
+			},
+			{
+				"name": "Tinkermon",
+				"image": {
+					"sprite": "spr_tinkermon.png",
+					"art": "art_tinkermon.jpg"
+				}
+			},
+			{
+				"name": "Hawkmon",
+				"image": {
+					"sprite": "spr_hawkmon.png",
+					"art": "art_hawkmon.jpg"
+				}
+			},
+			{
+				"name": "Wolfmon",
+				"image": {
+					"sprite": "spr_wolfmon.png",
+					"art": "art_wolfmon.jpg"
+				}
+			},
+			{
+				"name": "Gabumon",
+				"image": {
+					"sprite": "spr_gabumon.png",
+					"art": "art_gabumon.jpg"
+				}
+			}	
+		],
+		[
+			{
+				"name": "Diatrymon",
+				"image": {
+					"sprite": "spr_diatrymon.png",
+					"art": "art_diatrymon.jpg"
+				}
+			},
+			{
+				"name": "Peckmon",
+				"image": {
+					"sprite": "spr_peckmon.png",
+					"art": "art_peckmon.jpg"
+				}
+			},
+			{
+				"name": "Vegimon",
+				"image": {
+					"sprite": "spr_vegimon.png",
+					"art": "art_vegimon.jpg"
+				}
+			},
+			{
+				"name": "Cockatrimon",
+				"image": {
+					"sprite": "spr_cockatrimon.png",
+					"art": "art_cockatrimon.jpg"
+				}
+			},
+			{
+				"name": "Parasaurmon",
+				"image": {
+					"sprite": "spr_parasaurmon.png",
+					"art": "art_parasaurmon.jpg"
+				}
+			},
+			{
+				"name": "Petermon",
+				"image": {
+					"sprite": "spr_petermon.png",
+					"art": "art_petermon.jpg"
+				}
+			},
+			{
+				"name": "Aquilamon",
+				"image": {
+					"sprite": "spr_aquilamon.png",
+					"art": "art_aquilamon.jpg"
+				}
+			},
+			{
+				"name": "Garummon",
+				"image": {
+					"sprite": "spr_garummon.png",
+					"art": "art_garummon.jpg"
+				}
+			},
+			{
+				"name": "Garurumon",
+				"image": {
+					"sprite": "spr_garurumon.png",
+					"art": "art_garurumon.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Yatagaramon",
+				"image": {
+					"sprite": "spr_yatagaramon_savers.png",
+					"art": "art_yatagaramon_savers.jpg"
+				}
+			},
+			{
+				"name": "Toropiamon",
+				"image": {
+					"sprite": "spr_toropiamon.png",
+					"art": "art_toropiamon.jpg"
+				}
+			},
+			{
+				"name": "Hippogriffomon",
+				"image": {
+					"sprite": "spr_hippogriffomon.png",
+					"art": "art_hippogriffomon.jpg"
+				}
+			},
+			{
+				"name": "Parrotmon",
+				"image": {
+					"sprite": "spr_parrotmon.png",
+					"art": "art_parrotmon.jpg"
+				}
+			},
+			{
+				"name": "Entmon",
+				"image": {
+					"sprite": "spr_entmon.png",
+					"art": "art_entmon.jpg"
+				}
+			},
+			{
+				"name": "Lilamon",
+				"image": {
+					"sprite": "spr_lilamon.png",
+					"art": "art_lilamon.jpg"
+				}
+			},
+			{
+				"name": "Silphymon",
+				"image": {
+					"sprite": "spr_silphymon.png",
+					"art": "art_silphymon.jpg"
+				}
+			},
+			{
+				"name": "Beowolfmon",
+				"image": {
+					"sprite": "spr_beowolfmon.png",
+					"art": "art_beowolfmon.jpg"
+				}
+			},
+			{
+				"name": "Were Garurumon",
+				"image": {
+					"sprite": "spr_were_garurumon.png",
+					"art": "art_were_garurumon.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Ravmon",
+				"image": {
+					"sprite": "spr_ravmon.png",
+					"art": "art_ravmon.jpg"
+				}
+			},
+			{
+				"name": "Ancient Irismon",
+				"image": {
+					"sprite": "spr_ancient_irismon.png",
+					"art": "art_ancient_irismon.jpg"
+				}
+			},
+			{
+				"name": "Ancient Troiamon",
+				"image": {
+					"sprite": "spr_ancient_troiamon.png",
+					"art": "art_ancient_troiamon.jpg"
+				}
+			},
+			{
+				"name": "Xuanwumon",
+				"image": {
+					"sprite": "spr_xuanwumon.png",
+					"art": "art_xuanwumon.jpg"
+				}
+			},
+			{
+				"name": "Zhuqiaomon",
+				"image": {
+					"sprite": "spr_zhuqiaomon.png",
+					"art": "art_zhuqiaomon.jpg"
+				}
+			},
+			{
+				"name": "Ornismon",
+				"image": {
+					"sprite": "spr_ornismon.png",
+					"art": "art_ornismon.jpg"
+				}
+			},
+			{
+				"name": "Valkyrimon",
+				"image": {
+					"sprite": "spr_valkyrimon.png",
+					"art": "art_valkyrimon.jpg"
+				}
+			},
+			{
+				"name": "Magna Garurumon",
+				"image": {
+					"sprite": "spr_magna_garurumon.png",
+					"art": "art_magna_garurumon.jpg"
+				}
+			},
+			{
+				"name": "Metal Garurumon",
+				"image": {
+					"sprite": "spr_metal_garurumon.png",
+					"art": "art_metal_garurumon.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Lucemon: Satan Mode",
+				"image": {
+					"sprite": "spr_lucemon_satan_mode.png",
+					"art": "art_lucemon_satan_mode.jpg"
+				}
+			},
+			{
+				"name": "Huanglongmon",
+				"image": {
+					"sprite": "spr_huanglongmon_z2.png",
+					"art": "art_huanglongmon.jpg"
+				}
+			},
+			{
+				"name": "Susanoomon",
+				"image": {
+					"sprite": "spr_susanoomon.png",
+					"art": "art_susanoomon.jpg"
+				}
+			},
+			{
+				"name": "Omegamon",
+				"image": {
+					"sprite": "spr_omegamon.png",
+					"art": "art_omegamon.jpg"
+				}
+			},
+			{
+				"name": "Gabumon -Bond of Friendship-",
+				"image": {
+					"sprite": "spr_gabumon_kizuna.png",
+					"art": "art_gabumon_kizuna.jpg"
+				}
+			}
+		],
+		[
+			{
+				"name": "Imperialdramon: Paladin Mode",
+				"image": {
+					"sprite": "spr_imperialdramon_paladin_mode.png",
+					"art": "art_imperialdramon_paladin_mode.jpg"
+				}
+			}
+		]
+	]
+}
