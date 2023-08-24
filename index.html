@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Hello There! -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello There!</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	<style>
+		* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Nunito', sans-serif;
+		}
+		.bg {
+			position: fixed;
+			background-image: linear-gradient(75deg, #FC59C6, #485F89);
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100vw;
+			height: 100vh;
+			overflow: auto;
+		}
+		.content{
+			position: unset;
+			width: unset;
+			height: unset;
+			display: flex;
+			justify-content: center;
+			margin: 0px auto;
+		}
+		.box {
+			margin-top: 50px;
+			margin-bottom: 50px;
+			width: 500px;
+			text-align: center;
+			border: 4px solid #0E2052;
+			border-radius: 10px;
+			background-color: white;
+			box-shadow: 2px 2px 5px black;
+			opacity: 0;
+		}
+		.inner-content{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="content">
+			<div class="box">
+				<div class="inner-content">
+					<img src="img/Loogamon.jpg" alt="Loogamon" width=75%>
+					<h1>Hello There!</h1>
+					<p>This is my page.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	opa=0;
+	dega=0
+	wait=0;
+	function page_loop(){
+	dega+=2.5;
+	if (dega>360)
+	dega-=360
+	wait+=1;
+	if (wait>60)
+	{
+	wait=60;
+	opa+=0.1 * 0.2;
+	if (opa>1)
+	opa=1;
+	}
+	element=document.getElementsByClassName("box");
+	element[0].style.opacity=opa;
+	element=document.getElementsByClassName("bg");
+	element[0].style.backgroundImage="linear-gradient("+String(dega)+"deg, #FC59C6, #485F89)";
+	setTimeout(page_loop, 5);
+	}
+	page_loop();
+</script>
+</html>
