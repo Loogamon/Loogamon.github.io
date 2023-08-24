@@ -40,7 +40,28 @@
 					"sprite": "spr_tinkermon.png",
 					"art": "art_tinkermon.jpg"
 				}
-			}
+			},
+			{
+				"name": "Hawkmon",
+				"image": {
+					"sprite": "spr_hawkmon.png",
+					"art": "art_hawkmon.jpg"
+				}
+			},
+			{
+				"name": "Wolfmon",
+				"image": {
+					"sprite": "spr_wolfmon.png",
+					"art": "art_wolfmon.jpg"
+				}
+			},
+			{
+				"name": "Gabumon",
+				"image": {
+					"sprite": "spr_gabumon.png",
+					"art": "art_gabumon.jpg"
+				}
+			}	
 		],
 		[
 			{
