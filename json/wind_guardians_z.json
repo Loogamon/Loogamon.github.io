@@ -4,304 +4,982 @@
 		[
 			{
 				"name": "Pururumon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_pururumon.png",
 					"art": "art_pururumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Poromon" }
+				]
 			}
 		],
 		[
 			{
 				"name": "Poromon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_poromon.png",
 					"art": "art_poromon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Gabumon", "alt": "Pomumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4"
+						}
+					},
+					{ "digimon": "Pomumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-3"
+						}
+					},
+					{ "digimon": "Wolfmon", "alt": "Pomumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "1"
+						}
+					},
+					{ "digimon": "Tinkermon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0"
+						}
+					},
+					{ "digimon": "Falcomon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Hawkmon", "alt": "Falcomon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "0-1"
+						}
+					}
+				]
 			}
 		],
 		[
 			{
 				"name": "Falcomon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_falcomon_savers.png",
 					"art": "art_falcomon_savers.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Peckmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "3-4"
+						}
+					},
+					{ "digimon": "Diatrymon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0-2"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "3+",
+						}
+					}
+				]
 			},
 			{
 				"name": "Pomumon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_pomumon.png",
 					"art": "art_pomumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "3+",
+						}
+					}
+				]
 			},
 			{
 				"name": "Tinkermon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_tinkermon.png",
 					"art": "art_tinkermon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Petermon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "3-4"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "0-2"
+						}
+					}
+				]
 			},
 			{
 				"name": "Hawkmon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_hawkmon.png",
 					"art": "art_hawkmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Aquilamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Peckmon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "2+"
+						}
+					}
+				]
 			},
 			{
 				"name": "Wolfmon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_wolfmon.png",
 					"art": "art_wolfmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "1"
+						}
+					},
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0"
+						}
+					},
+					{ "digimon": "Petermon", "conditions": 
+						{
+							"care_mistakes": "3+"
+						}
+					}
+				]
 			},
 			{
 				"name": "Gabumon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_gabumon.png",
 					"art": "art_gabumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4",
+							"battle_wins": "0-49"
+						}
+					},
+					{ "digimon": "Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "3"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-2"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "2+"
+						}
+					},
+					{ "digimon": "Gabumon -Bond of Friendship-", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4",
+							"battle_wins": "50+"
+						}
+					}
+				]
 			}	
 		],
 		[
 			{
 				"name": "Diatrymon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_diatrymon.png",
 					"art": "art_diatrymon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Peckmon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_peckmon.png",
 					"art": "art_peckmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Vegimon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_vegimon.png",
 					"art": "art_vegimon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"level": "6"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					},
+					{ "digimon": "Lilamon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					}
+				]
 			},
 			{
 				"name": "Cockatrimon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_cockatrimon.png",
 					"art": "art_cockatrimon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Parasaurmon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_parasaurmon.png",
 					"art": "art_parasaurmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"level": "5-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					}
+				]
 			},
 			{
 				"name": "Petermon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_petermon.png",
 					"art": "art_petermon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Lilamon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Aquilamon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_aquilamon.png",
 					"art": "art_aquilamon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Silphymon", "conditions": 
+						{
+							"level": "6",
+							"jogress": "Tailmon"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"level": "1-5",
+							"jogress": "Tailmon"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Garummon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_garummon.png",
 					"art": "art_garummon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					},
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					}
+				]
 			},
 			{
 				"name": "Garurumon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_garurumon.png",
 					"art": "art_garurumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			}
 		],
 		[
 			{
 				"name": "Yatagaramon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_yatagaramon_savers.png",
 					"art": "art_yatagaramon_savers.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Ravmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8"
+						}
+					},
+					{ "digimon": "Ancient Irismon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Toropiamon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_toropiamon.png",
 					"art": "art_toropiamon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Ancient Irismon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "7-8"
+						}
+					},
+					{ "digimon": "Zhuqiaomon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					}
+				]
 			},
 			{
 				"name": "Hippogriffomon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_hippogriffomon.png",
 					"art": "art_hippogriffomon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Ornismon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Data, Free"
+						}
+					},
+					{ "digimon": "Xuanwumon", "conditions": 
+						{
+							"jogress": "Vaccine"
+						}
+					},
+					{ "digimon": "Zhuqiaomon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Parrotmon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_parrotmon.png",
 					"art": "art_parrotmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Ravmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8"
+						}
+					},
+					{ "digimon": "Ancient Irismon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Entmon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_entmon.png",
 					"art": "art_entmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Xuanwumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"level": "6-8"
+						}
+					},
+					{ "digimon": "Ornismon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					}
+				]
 			},
 			{
 				"name": "Lilamon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_lilamon.png",
 					"art": "art_lilamon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Ancient Irismon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Data, Free"
+						}
+					},
+					{ "digimon": "Ravmon", "conditions": 
+						{
+							"jogress": "Vaccine"
+						}
+					},
+					{ "digimon": "Ornismon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Silphymon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_silphymon.png",
 					"art": "art_silphymon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Valkyrimon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "6-8"
+						}
+					},
+					{ "digimon": "Ancient Troiamon", "conditions": 
+						{
+							"jogress": "Data, Free"
+						}
+					},
+					{ "digimon": "Ancient Irismon", "conditions": 
+						{
+							"jogress": "Vaccine"
+						}
+					},
+					{ "digimon": "Zhuqiaomon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
 			},
 			{
 				"name": "Beowolfmon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_beowolfmon.png",
 					"art": "art_beowolfmon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Magna Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "6-8"
+						}
+					},
+					{ "digimon": "Magna Garurumon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					},
+					{ "digimon": "Metal Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					}
+				]
 			},
 			{
 				"name": "Were Garurumon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_were_garurumon.png",
 					"art": "art_were_garurumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Metal Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "6-8"
+						}
+					},
+					{ "digimon": "Metal Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Magna Garurumon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
 			}
 		],
 		[
 			{
 				"name": "Ravmon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_ravmon.png",
 					"art": "art_ravmon.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Ancient Irismon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_ancient_irismon.png",
 					"art": "art_ancient_irismon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Lucemon: Satan Mode", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8-10"
+						}
+					}
+				]
 			},
 			{
 				"name": "Ancient Troiamon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_ancient_troiamon.png",
 					"art": "art_ancient_troiamon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Lucemon: Satan Mode", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8-10"
+						}
+					}
+				]
 			},
 			{
 				"name": "Xuanwumon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_xuanwumon.png",
 					"art": "art_xuanwumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Huanglongmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8-10"
+						}
+					}
+				]
 			},
 			{
 				"name": "Zhuqiaomon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_zhuqiaomon.png",
 					"art": "art_zhuqiaomon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Huanglongmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "8-10"
+						}
+					}
+				]
 			},
 			{
 				"name": "Ornismon",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_ornismon.png",
 					"art": "art_ornismon.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Valkyrimon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_valkyrimon.png",
 					"art": "art_valkyrimon.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Magna Garurumon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_magna_garurumon.png",
 					"art": "art_magna_garurumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Susanoomon", "conditions": 
+						{
+							"jogress": "Kaiser Greymon"
+						}
+					}
+				]
 			},
 			{
 				"name": "Metal Garurumon",
+				"attribute": "Data",
 				"image": {
 					"sprite": "spr_metal_garurumon.png",
 					"art": "art_metal_garurumon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Omegamon", "conditions": 
+						{
+							"jogress": "War Greymon"
+						}
+					}
+				]
 			}
 		],
 		[
 			{
 				"name": "Lucemon: Satan Mode",
+				"attribute": "Virus",
 				"image": {
 					"sprite": "spr_lucemon_satan_mode.png",
 					"art": "art_lucemon_satan_mode.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Huanglongmon",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_huanglongmon_z2.png",
 					"art": "art_huanglongmon.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Susanoomon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_susanoomon.png",
 					"art": "art_susanoomon.jpg"
-				}
+				},
+				"evos": []
 			},
 			{
 				"name": "Omegamon",
+				"attribute": "Vaccine",
 				"image": {
 					"sprite": "spr_omegamon.png",
 					"art": "art_omegamon.jpg"
-				}
+				},
+				"evos":
+				[
+					{ "digimon": "Imperialdramon: Paladin Mode", "conditions": 
+						{
+							"jogress": "Imperialdramon: Fighter Mode"
+						}
+					}
+				]
 			},
 			{
 				"name": "Gabumon -Bond of Friendship-",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_gabumon_kizuna.png",
 					"art": "art_gabumon_kizuna.jpg"
-				}
+				},
+				"evos": []
 			}
 		],
 		[
 			{
 				"name": "Imperialdramon: Paladin Mode",
+				"attribute": "Free",
 				"image": {
 					"sprite": "spr_imperialdramon_paladin_mode.png",
 					"art": "art_imperialdramon_paladin_mode.jpg"
-				}
+				},
+				"evos": []
 			}
 		]
 	]
