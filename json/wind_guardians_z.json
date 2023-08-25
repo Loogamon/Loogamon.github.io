@@ -116,7 +116,7 @@
 					},
 					{ "digimon": "Vegimon", "conditions": 
 						{
-							"care_mistakes": "3+",
+							"care_mistakes": "3+"
 						}
 					}
 				]
