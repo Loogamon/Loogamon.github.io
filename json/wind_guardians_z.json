@@ -5,6 +5,10 @@
 			{
 				"name": "Pururumon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "プルルモン"
+				},
 				"image": {
 					"sprite": "spr_pururumon.png",
 					"art": "art_pururumon.jpg"
@@ -19,13 +23,17 @@
 			{
 				"name": "Poromon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ポロモン"
+				},
 				"image": {
 					"sprite": "spr_poromon.png",
 					"art": "art_poromon.jpg"
 				},
 				"evos":
 				[
-					{ "digimon": "Gabumon", "alt": "Pomumon", "conditions": 
+					{ "digimon": "Gabumon", "alt": "Pomumon", "unlock_notes": "Connect to 2 Different Devices", "unlock_notes_jp": "2 つの異なるデバイスに接続する", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "4"
@@ -37,7 +45,7 @@
 							"effort": "2-3"
 						}
 					},
-					{ "digimon": "Wolfmon", "alt": "Pomumon", "conditions": 
+					{ "digimon": "Wolfmon", "alt": "Pomumon", "unlock_notes": "Connect to 2 Different Devices", "unlock_notes_jp": "2 つの異なるデバイスに接続する", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "1"
@@ -55,7 +63,7 @@
 							"effort": "2-4"
 						}
 					},
-					{ "digimon": "Hawkmon", "alt": "Falcomon", "conditions": 
+					{ "digimon": "Hawkmon", "alt": "Falcomon", "unlock_notes": "Connect to a Different Device", "unlock_notes_jp": "別のデバイスに接続する", "conditions": 
 						{
 							"care_mistakes": "2+",
 							"effort": "0-1"
@@ -68,6 +76,10 @@
 			{
 				"name": "Falcomon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ファルコモン"
+				},
 				"image": {
 					"sprite": "spr_falcomon_savers.png",
 					"art": "art_falcomon_savers.jpg"
@@ -96,6 +108,10 @@
 			{
 				"name": "Pomumon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ポームモン"
+				},
 				"image": {
 					"sprite": "spr_pomumon.png",
 					"art": "art_pomumon.jpg"
@@ -124,6 +140,10 @@
 			{
 				"name": "Tinkermon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "ティンカーモン"
+				},
 				"image": {
 					"sprite": "spr_tinkermon.png",
 					"art": "art_tinkermon.jpg"
@@ -159,6 +179,10 @@
 			{
 				"name": "Hawkmon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ホークモン"
+				},
 				"image": {
 					"sprite": "spr_hawkmon.png",
 					"art": "art_hawkmon.jpg"
@@ -187,6 +211,10 @@
 			{
 				"name": "Wolfmon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "Lobomon",
+					"jp": "ヴォルフモン"
+				},
 				"image": {
 					"sprite": "spr_wolfmon.png",
 					"art": "art_wolfmon.jpg"
@@ -221,6 +249,10 @@
 			{
 				"name": "Gabumon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ガブモン"
+				},
 				"image": {
 					"sprite": "spr_gabumon.png",
 					"art": "art_gabumon.jpg"
@@ -265,6 +297,10 @@
 			{
 				"name": "Diatrymon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ディアトリモン"
+				},
 				"image": {
 					"sprite": "spr_diatrymon.png",
 					"art": "art_diatrymon.jpg"
@@ -292,6 +328,10 @@
 			{
 				"name": "Peckmon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ペックモン"
+				},
 				"image": {
 					"sprite": "spr_peckmon.png",
 					"art": "art_peckmon.jpg"
@@ -319,6 +359,10 @@
 			{
 				"name": "Vegimon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "Vegiemon",
+					"jp": "ベジーモン"
+				},
 				"image": {
 					"sprite": "spr_vegimon.png",
 					"art": "art_vegimon.jpg"
@@ -346,6 +390,10 @@
 			{
 				"name": "Cockatrimon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "Kokatorimon",
+					"jp": "コカトリモン"
+				},
 				"image": {
 					"sprite": "spr_cockatrimon.png",
 					"art": "art_cockatrimon.jpg"
@@ -378,6 +426,10 @@
 			{
 				"name": "Parasaurmon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "パラサウモン"
+				},
 				"image": {
 					"sprite": "spr_parasaurmon.png",
 					"art": "art_parasaurmon.jpg"
@@ -405,6 +457,10 @@
 			{
 				"name": "Petermon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ピーターモン"
+				},
 				"image": {
 					"sprite": "spr_petermon.png",
 					"art": "art_petermon.jpg"
@@ -437,6 +493,10 @@
 			{
 				"name": "Aquilamon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "アクィラモン"
+				},
 				"image": {
 					"sprite": "spr_aquilamon.png",
 					"art": "art_aquilamon.jpg"
@@ -476,6 +536,10 @@
 			{
 				"name": "Garummon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "KendoGarurumon",
+					"jp": "ガルムモン"
+				},
 				"image": {
 					"sprite": "spr_garummon.png",
 					"art": "art_garummon.jpg"
@@ -503,6 +567,10 @@
 			{
 				"name": "Garurumon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ガルルモン"
+				},
 				"image": {
 					"sprite": "spr_garurumon.png",
 					"art": "art_garurumon.jpg"
@@ -532,6 +600,10 @@
 			{
 				"name": "Yatagaramon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "Crowmon",
+					"jp": "ヤタガラモン"
+				},
 				"image": {
 					"sprite": "spr_yatagaramon_savers.png",
 					"art": "art_yatagaramon_savers.jpg"
@@ -559,6 +631,10 @@
 			{
 				"name": "Toropiamon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "トロピアモン"
+				},
 				"image": {
 					"sprite": "spr_toropiamon.png",
 					"art": "art_toropiamon.jpg"
@@ -586,6 +662,10 @@
 			{
 				"name": "Hippogriffomon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "HippoGryphonmon",
+					"jp": "ヒポグリフォモン"
+				},
 				"image": {
 					"sprite": "spr_hippogriffomon.png",
 					"art": "art_hippogriffomon.jpg"
@@ -618,6 +698,10 @@
 			{
 				"name": "Parrotmon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "パロットモン"
+				},
 				"image": {
 					"sprite": "spr_parrotmon.png",
 					"art": "art_parrotmon.jpg"
@@ -645,6 +729,10 @@
 			{
 				"name": "Entmon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "エントモン"
+				},
 				"image": {
 					"sprite": "spr_entmon.png",
 					"art": "art_entmon.jpg"
@@ -672,6 +760,10 @@
 			{
 				"name": "Lilamon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ライラモン"
+				},
 				"image": {
 					"sprite": "spr_lilamon.png",
 					"art": "art_lilamon.jpg"
@@ -704,6 +796,10 @@
 			{
 				"name": "Silphymon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "シルフィーモン"
+				},
 				"image": {
 					"sprite": "spr_silphymon.png",
 					"art": "art_silphymon.jpg"
@@ -736,6 +832,10 @@
 			{
 				"name": "Beowolfmon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ベオウルフモン"
+				},
 				"image": {
 					"sprite": "spr_beowolfmon.png",
 					"art": "art_beowolfmon.jpg"
@@ -763,6 +863,10 @@
 			{
 				"name": "Were Garurumon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "WereGarurumon",
+					"jp": "ワーガルルモン"
+				},
 				"image": {
 					"sprite": "spr_were_garurumon.png",
 					"art": "art_were_garurumon.jpg"
@@ -792,6 +896,10 @@
 			{
 				"name": "Ravmon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "Ravemon",
+					"jp": "レイヴモン"
+				},
 				"image": {
 					"sprite": "spr_ravmon.png",
 					"art": "art_ravmon.jpg"
@@ -801,6 +909,10 @@
 			{
 				"name": "Ancient Irismon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "AncientKazemon",
+					"jp": "エンシェントイリスモン"
+				},
 				"image": {
 					"sprite": "spr_ancient_irismon.png",
 					"art": "art_ancient_irismon.jpg"
@@ -818,6 +930,10 @@
 			{
 				"name": "Ancient Troiamon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "AncientTroymon",
+					"jp": "エンシェントトロイアモン"
+				},
 				"image": {
 					"sprite": "spr_ancient_troiamon.png",
 					"art": "art_ancient_troiamon.jpg"
@@ -835,6 +951,10 @@
 			{
 				"name": "Xuanwumon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "Ebonwumon",
+					"jp": "シェンウーモン"
+				},
 				"image": {
 					"sprite": "spr_xuanwumon.png",
 					"art": "art_xuanwumon.jpg"
@@ -852,6 +972,10 @@
 			{
 				"name": "Zhuqiaomon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "スーツェーモン"
+				},
 				"image": {
 					"sprite": "spr_zhuqiaomon.png",
 					"art": "art_zhuqiaomon.jpg"
@@ -869,6 +993,10 @@
 			{
 				"name": "Ornismon",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "オニスモン"
+				},
 				"image": {
 					"sprite": "spr_ornismon.png",
 					"art": "art_ornismon.jpg"
@@ -878,6 +1006,10 @@
 			{
 				"name": "Valkyrimon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ヴァルキリモン"
+				},
 				"image": {
 					"sprite": "spr_valkyrimon.png",
 					"art": "art_valkyrimon.jpg"
@@ -887,6 +1019,10 @@
 			{
 				"name": "Magna Garurumon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "MagnaGarurumon",
+					"jp": "マグナガルルモン"
+				},
 				"image": {
 					"sprite": "spr_magna_garurumon.png",
 					"art": "art_magna_garurumon.jpg"
@@ -903,6 +1039,10 @@
 			{
 				"name": "Metal Garurumon",
 				"attribute": "Data",
+				"localization": {
+					"eng": "MetalGarurumon",
+					"jp": "メタルガルルモン"
+				},
 				"image": {
 					"sprite": "spr_metal_garurumon.png",
 					"art": "art_metal_garurumon.jpg"
@@ -921,6 +1061,10 @@
 			{
 				"name": "Lucemon: Satan Mode",
 				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "ルーチェモン：サタンモード"
+				},
 				"image": {
 					"sprite": "spr_lucemon_satan_mode.png",
 					"art": "art_lucemon_satan_mode.jpg"
@@ -930,6 +1074,10 @@
 			{
 				"name": "Huanglongmon",
 				"attribute": "Free",
+				"localization": {
+					"eng": "Fanglongmon",
+					"jp": "ファンロンモン"
+				},
 				"image": {
 					"sprite": "spr_huanglongmon_z2.png",
 					"art": "art_huanglongmon.jpg"
@@ -939,6 +1087,10 @@
 			{
 				"name": "Susanoomon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "Susanomon",
+					"jp": "スサノオモン"
+				},
 				"image": {
 					"sprite": "spr_susanoomon.png",
 					"art": "art_susanoomon.jpg"
@@ -948,6 +1100,10 @@
 			{
 				"name": "Omegamon",
 				"attribute": "Vaccine",
+				"localization": {
+					"eng": "Omnimon",
+					"jp": "オメガモン"
+				},
 				"image": {
 					"sprite": "spr_omegamon.png",
 					"art": "art_omegamon.jpg"
@@ -964,6 +1120,10 @@
 			{
 				"name": "Gabumon -Bond of Friendship-",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ガブモン -友情の絆-"
+				},
 				"image": {
 					"sprite": "spr_gabumon_kizuna.png",
 					"art": "art_gabumon_kizuna.jpg"
@@ -975,6 +1135,10 @@
 			{
 				"name": "Imperialdramon: Paladin Mode",
 				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "インペリアルドラモン：パラディンモード"
+				},
 				"image": {
 					"sprite": "spr_imperialdramon_paladin_mode.png",
 					"art": "art_imperialdramon_paladin_mode.jpg"
