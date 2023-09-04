@@ -1146,5 +1146,39 @@
 				"evos": []
 			}
 		]
-	]
+	],
+	"external_digimon": [
+		{
+			"name": "Tailmon",
+			"localization": {
+				"eng": "Gatomon",
+				"jp": "テイルモン"
+			}
+		},
+		{
+			"name": "Kaiser Greymon",
+			"localization": {
+				"eng": "EmperorGreymon",
+				"jp": "カイゼルグレイモン"
+			}
+		},
+		{
+			"name": "War Greymon",
+			"localization": {
+				"eng": "WarGreymon",
+				"jp": "ウォーグレイモン"
+			}
+		},
+		{
+			"name": "Imperialdramon: Fighter Mode",
+			"localization": {
+				"eng": "",
+				"jp": "インペリアルドラモン：ファイターモード"
+			}
+		}
+	],
+	"device": {
+		"max_level": [ 0, 0, 0, 6, 8, 10, 0, 0 ],
+		"release_date": "2021-03-17"
+	}
 }
