@@ -1178,6 +1178,7 @@
 		}
 	],
 	"device": {
+		"jogress_anylevel": false;
 		"max_level": [ 0, 0, 0, 6, 8, 10, 0, 0 ],
 		"release_date": "2021-03-17"
 	}
