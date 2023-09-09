@@ -1,0 +1,13 @@
+.background {
+	background-image: url("wgz_checkers.png");
+	opacity: 0.2;
+}
+
+.background-inner {
+	background-image: url("wgz_background.jpg");
+	opacity: 0.5;
+}
+
+.box-left {
+	background-image: url("penz_lineboard.png");
+}
