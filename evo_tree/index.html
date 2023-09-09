@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Digimon Pendulum Z II Guide: Wind Guardians</title>
+	<link rel="icon" type="image/x-icon" href="assets/wgz_icon.ico">
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/wgz_style.css">
+	<script src="assets/scripts.js"></script>
+</head>
+<body onresize="render_resize()">
+	<div class="no-css">
+		<h1>Hi There!</h1>
+		<p>You were not supposed to see this, so this means the CSS isn't working.</p>
+	</div>
+	<div class="background-inner"></div>
+	<div class="background"></div>
+	<div class="imdummy"></div>
+	<div class="container">
+		<div class="content">
+					<div class="box">
+						<div class="box-left">
+							<div class="box-left-inner">
+								<div id="lines">
+								</div>
+								<div class="box-left-evo" id="evo-box">
+								</div>
+							</div>
+						</div>
+						<div class="box-right">
+							<div id="digi-cards">
+								<div id="digimon-profile"></div>
+								<div id="evo-list">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box-down">
+						<div class="bd-actual">
+							<div class="bd-box">
+							</div>
+						</div>
+						<div class="bd-nothing"></div>
+					</div>		
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	no_css_init();
+	dataload_digimon();
+	rescale_boxes();
+	render();
+	document.resize = function(e)
+	{
+		//console.log("?");
+		render_resize();
+	}
+	digimon_card_init();
+</script>
+</html>
