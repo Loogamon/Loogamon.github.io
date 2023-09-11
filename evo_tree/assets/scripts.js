@@ -564,6 +564,7 @@ function box_click(element,stg,digi)
 		box_select.stg=-1
 		box_select.id=-1;
 		box_select.random=0;
+		hide_info()
 		reset_box_status();
 		evo_rows_blue=[];
 		evo_columns_blue=[];
@@ -574,6 +575,7 @@ function box_click(element,stg,digi)
 	box_select.stg=stg
 	box_select.id=digi;
 	box_select.random=0;
+	show_info();
 	/*console.log("---");
 	console.log(data.digimon[stg][digi].name+" ("+stg+", "+digi+")");
 	console.log("<Evolves From>");
@@ -744,6 +746,7 @@ function random_line()
 	box_right=document.querySelector(".box-right");
 	box_right.scrollTop = 0;
 	box_update();
+	show_info();
 	render(0);
 	//console.log(random_list);
 }
@@ -1408,7 +1411,7 @@ function localize_text(str_text)
 	return res;
 }
 
-function lowres_mode()
+function mobile_mode()
 {
 	var item,comp,prop;
 	item=document.querySelector(".imdummy");
@@ -1458,4 +1461,41 @@ function rescale_boxes()
 			}
 		}
 	}*/
+}
+
+function show_info()
+{
+	box_right=document.querySelector(".box-right");
+	box_right.style.display="flex";
+	box_right=document.querySelector(".cover");
+	box_right.style.display="block";	
+}
+
+function hide_info()
+{
+	//console.log("Calls on Hide!");
+}
+
+function cover_click()
+{
+	box_right=document.querySelector(".box-right");
+	box_right.style.display="";
+	box_right=document.querySelector(".cover");
+	box_right.style.display="";	
+	
+	box_select.stg=-1
+	box_select.id=-1;
+	box_select.random=0;
+	hide_info()
+	reset_box_status();
+	evo_rows_blue=[];
+	evo_columns_blue=[];
+	box_update();
+	render(0);
+}
+
+function bottom_click()
+{
+	if (mobile_mode()==true)
+		cover_click();
 }

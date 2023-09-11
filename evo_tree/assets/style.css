@@ -35,6 +35,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: black;
+	opacity: 0;
 }
 
 .no-css {
@@ -332,6 +333,7 @@ body {
 	font-size: small;
 	color: gray;
 	cursor: pointer;
+	font-size: small;
 }
 
 .dmb-conditions {
@@ -391,6 +393,87 @@ body {
 	opacity: 0;
 }
 
+@media screen and (max-width: 480px) {
+	/*.box-left, .card-box {
+		border-color: red;
+	}*/
+	
+	.content {
+	display: unset;
+	flex: unset;
+	left: unset;
+	transform: unset;
+	min-width: unset;
+	width: 100%;
+	}
+	
+	.box {
+		height: 15cm;
+	}
+	
+	.box-left {
+		display: flex;
+		flex: 1;
+		margin: unset;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	.evo-row {
+	/*width: 90%;*/
+	}
+	
+	
+	.box-right {
+	display: none;
+	flex: unset;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	margin-right: unset;
+	padding-right: unset;
+	width: 80vw;
+	height: 100vh;
+	
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index:8;
+	}
+	
+	.digimon-box {
+		width: 9vw;
+		aspect-ratio: 1;
+	}
+	
+	/* Artwork Box */
+	.card-box-digimon-img {
+		width: 70%;
+	}
+	
+	.prev-line-h, .prev-line-v {
+		display: none;
+	}
+	
+	.imdummy {
+		opacity: 1;
+	}
+	
+	.line-h, .evo-line-h, .prev-line-h, .line-v, .evo-line-v, .prev-line-v {
+		transform: translate(-4px,-10px);
+	}
+	
+	.cover {
+		z-index: 7;
+		backdrop-filter: blur(10px);
+		opacity: 0.5;
+	}
+	
+	.box-down {
+		justify-content: center;
+	}
+}
+
 @media screen and (max-width: 1455px) {
 		
 	/*.box-left, .card-box {
@@ -414,10 +497,6 @@ body {
 	.prev-line-h, .prev-line-v {
 		/*display: none;
 		opacity: 0;*/
-	}
-	
-	.imdummy {
-		opacity: 1;
 	}
 
 	
