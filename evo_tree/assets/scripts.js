@@ -1,5 +1,6 @@
 const auto_refresh=false;
 const debug_title=false;
+const show_calls=false;
 
 var lang=0;
 var digimon_count,evo_rows,evo_columns;
@@ -36,6 +37,8 @@ function no_css_init()
 
 function render(lines_only)
 {
+	if (show_calls)
+		console.log("CALL render("+lines_only+")");
 	digimon_autocount();
 	var draw_str="";
 		
@@ -556,6 +559,8 @@ function box_enter(element,stg,digi)
 
 function box_click(element,stg,digi)
 {
+	if (show_calls)
+		console.log("CLICK")
 	attr_exit();
 	//box_hover.stg=stg
 	//box_hover.id=digi
@@ -833,7 +838,6 @@ function find_attribute(atr)
 		}
 	}
 	box_update()
-	render(0);
 	return count;
 }
 
@@ -852,7 +856,8 @@ function digimon_card_init()
 
 function card_render()
 {
-	//console.log("Hi");
+	if (show_calls)
+		console.log("CALL card_render()");
 	var card_box,box_right,digi_profile;
 	var card_html="";
 	var sel,done;
@@ -941,6 +946,8 @@ function card_render()
 
 function render_resize()
 {
+	if (show_calls)
+		console.log("CALL render_resize()");
 	width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 	rescale_boxes()
 	var p_digimon="";
@@ -1330,7 +1337,7 @@ function change_lang(element)
 	if (lang==2)
 		random_span.innerText="ランダム化する";
 	rename_digimon_boxes();
-	render();
+	render(0);
 }
 
 function rename_digimon_boxes()
