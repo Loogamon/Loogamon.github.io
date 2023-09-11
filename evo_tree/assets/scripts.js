@@ -1015,18 +1015,20 @@ function add_condition_box(stg,id,i)
 		card_html+='<div class="dmb-splitter-sprite">'
 		t_stg=stg;
 		t_id=id;
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseup="minibox_enter(this)"'
-		spr=data.digimon[stg][id].image.sprite;
-		card_html+='<div title="'+(data.digimon[stg][id].name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
-		card_html+="'digimon_art/"+spr+"')"
-		card_html+=';"'; card_html+=">"; card_html+="</div>"
-		card_html+='</div>'
-		//
 		digi_name=data.digimon[stg][id].name
 		if (lang==1 && data.digimon[stg][id].localization.eng!="")
 			digi_name=data.digimon[stg][id].localization.eng;
 		if (lang==2 && data.digimon[stg][id].localization.jp!="")
 			digi_name=data.digimon[stg][id].localization.jp;
+		
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		spr=data.digimon[stg][id].image.sprite;
+		card_html+='<div title="'+(digi_name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
+		card_html+="'digimon_art/"+spr+"')"
+		card_html+=';"'; card_html+=">"; card_html+="</div>"
+		card_html+='</div>'
+		//
+		
 		card_html+='<div class="dmb-splitter-name" style="border-bottom: 0px;">'
 		card_html+='<p class="dmb-splitter-name-main">'+digi_name+'</p>'
 		card_html+='</div>'
@@ -1048,20 +1050,22 @@ function add_condition_box(stg,id,i)
 		card_html+='<div class="dmb-splitter-sprite">'
 		t_stg=data.digimon[stg][id].evos[i].stg;
 		t_id=data.digimon[stg][id].evos[i].id;
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseup="minibox_enter(this)"'
-		spr=data.digimon[t_stg][t_id].image.sprite;
-		card_html+='<div title="'+(data.digimon[stg][id].evos[i].digimon)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
-		card_html+="'digimon_art/"+spr+"')"
-		card_html+=';"'; card_html+=">"; card_html+="</div>"
-		card_html+='</div>'
-		//
-		card_html+='<div class="dmb-splitter-name">'
 		temp_data=digimon_find(data.digimon[stg][id].evos[i].digimon);
 		digi_name=data.digimon[temp_data.stg][temp_data.id].name
 		if (lang==1 && data.digimon[temp_data.stg][temp_data.id].localization.eng!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.eng;
 		if (lang==2 && data.digimon[temp_data.stg][temp_data.id].localization.jp!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.jp;
+		
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		spr=data.digimon[t_stg][t_id].image.sprite;
+		card_html+='<div title="'+(digi_name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
+		card_html+="'digimon_art/"+spr+"')"
+		card_html+=';"'; card_html+=">"; card_html+="</div>"
+		card_html+='</div>'
+		//
+		card_html+='<div class="dmb-splitter-name">'
+		
 		card_html+='<p class="dmb-splitter-name-main">'+(digi_name)+'</p>'
 		card_html+='</div>'
 		card_html+='</div>'
@@ -1074,27 +1078,27 @@ function add_condition_box(stg,id,i)
 	{
 		t_stg=data.digimon[stg][id].evos[i].stg;
 		t_id=data.digimon[stg][id].evos[i].id;
-		var digi_subtext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].alt)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].alt+"'")+')" onmouseleave="subtext_exit(this)"'
-		card_html+='<div class="unlockable-mon-upper">'
-		card_html+='<div class="dmb-splitter">'
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseup="minibox_enter(this)"'
-		spr=data.digimon[t_stg][t_id].image.sprite;
-		
-		card_html+='<div class="dmb-splitter-sprite">'
-		card_html+='<div title="'+(data.digimon[stg][id].evos[i].digimon)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
-		card_html+="'digimon_art/"+spr+"')"
-		card_html+=';"'; card_html+=">"; card_html+="</div>"
-		card_html+='</div>'
-		
-		card_html+='<div class="dmb-splitter-name">'
 		temp_data=digimon_find(data.digimon[stg][id].evos[i].digimon);
 		digi_name=data.digimon[temp_data.stg][temp_data.id].name
 		if (lang==1 && data.digimon[temp_data.stg][temp_data.id].localization.eng!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.eng;
 		if (lang==2 && data.digimon[temp_data.stg][temp_data.id].localization.jp!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.jp;
-		card_html+='<p class="dmb-splitter-name-main">'+(digi_name)+'</p>'
+		var digi_subtext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].alt)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].alt+"'")+')" onmouseleave="subtext_exit(this)"'
+		card_html+='<div class="unlockable-mon-upper">'
+		card_html+='<div class="dmb-splitter">'
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		spr=data.digimon[t_stg][t_id].image.sprite;
 		
+		card_html+='<div class="dmb-splitter-sprite">'
+		card_html+='<div title="'+(digi_name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
+		card_html+="'digimon_art/"+spr+"')"
+		card_html+=';"'; card_html+=">"; card_html+="</div>"
+		card_html+='</div>'
+		
+		card_html+='<div class="dmb-splitter-name">'
+		
+		card_html+='<p class="dmb-splitter-name-main">'+(digi_name)+'</p>'
 		temp_data=digimon_find(data.digimon[stg][id].evos[i].alt);
 		digi_name=data.digimon[temp_data.stg][temp_data.id].name
 		if (lang==1 && data.digimon[temp_data.stg][temp_data.id].localization.eng!="")
