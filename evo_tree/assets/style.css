@@ -315,6 +315,9 @@ body {
 	/*z-index:4;*/
 	image-rendering: pixelated;
 	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 	/* opacity: 0.5; */
 }
 
@@ -459,6 +462,9 @@ body {
 	.digimon-box {
 		width: 9vw;
 		aspect-ratio: 1;
+		user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
 	}
 	
 	/* Artwork Box */
