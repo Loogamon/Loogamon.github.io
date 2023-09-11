@@ -472,6 +472,12 @@ body {
 	.box-down {
 		justify-content: center;
 	}
+	
+	.dmb-conditions-attr {
+	text-decoration: unset;
+	cursor: unset;
+	}
+
 }
 
 @media screen and (max-width: 1455px) {
