@@ -16,14 +16,14 @@ body {
 
 .background {
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	width: 150vw;
+	height: 150vh;
 }
 
 .background-inner {
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	width: 150vw;
+	height: 150vh;
 	background-size: cover;
 	object-fit: fill;
 	background-image: linear-gradient(98deg, yellow, green);
@@ -334,10 +334,12 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 	border-bottom: 1px solid gray;
+	overflow-wrap: anywhere;
 }
 
 .dmb-splitter-name-main {
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .dmb-splitter-name-sub {
@@ -358,6 +360,21 @@ body {
 .dmb-conditions-attr {
 	text-decoration: underline dotted;
 	cursor: help;
+}
+
+.condition-caremistakes {
+	color: darkred;
+	font-weight: bold;
+}
+
+.condition-effortlvl {
+	color: darkgreen;
+	font-weight: bold;
+}
+
+.condition-jogressbattle {
+	color: darkblue;
+	font-weight: bold;
 }
 
 .help-text {
@@ -407,6 +424,19 @@ body {
 
 .imdummy {
 	position: absolute;
+	display: none;
+	opacity: 0;
+}
+
+#rema-box{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 0px;
+	left: 0px;
+	background-image: unset;
+	background-color: red;
+	z-index:10;
 	display: none;
 	opacity: 0;
 }
@@ -497,6 +527,20 @@ body {
 	.dmb-conditions-attr {
 	text-decoration: unset;
 	cursor: unset;
+	}
+	
+	.evo-row {
+	justify-content: space-evenly;
+	width: 99%
+	}
+	
+	.card-box {
+	box-shadow: 1px 5px 5px black;
+	}
+
+	#rema-box{
+		display: none;
+		left: 0px;
 	}
 
 }

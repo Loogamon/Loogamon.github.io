@@ -596,6 +596,7 @@ function box_click(element,stg,digi)
 	box_right=document.querySelector(".box-right");
 	box_right.scrollTop = 0;
 	box_update();
+	rema_fix();
 }
 
 function box_down(element,stg,digi)
@@ -949,7 +950,6 @@ function render_resize()
 	if (show_calls)
 		console.log("CALL render_resize()");
 	width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	rescale_boxes()
 	var p_digimon="";
 	var digimon="";
 	var d1,d2;
@@ -982,6 +982,7 @@ function render_resize()
 	}
 	box_update();
 	render(0);
+	rema_fix();
 }
 
 function add_note_box(note,caption)
@@ -991,8 +992,6 @@ function add_note_box(note,caption)
 	card_html+='<div class="non-unlockable-mon">'
 	card_html+='<div class="dmb-splitter">'
 	//
-	card_html+='<div class="dmb-splitter-sprite">' //style="height: 40px;"
-	card_html+='</div>'
 	card_html+='<div class="dmb-splitter-name" style="margin-left: 0px;">'
 	card_html+='<p class="dmb-splitter-name-main">'+(caption)+'</p>'
 	card_html+='</div>'
@@ -1022,6 +1021,7 @@ function add_condition_box(stg,id,i)
 		card_html+='<div class="dmb-splitter-sprite">'
 		t_stg=stg;
 		t_id=id;
+		var digi_maintext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].name)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].name+"'")+')" onmouseleave="subtext_exit(this)"'
 		digi_name=data.digimon[stg][id].name
 		if (lang==1 && data.digimon[stg][id].localization.eng!="")
 			digi_name=data.digimon[stg][id].localization.eng;
@@ -1037,7 +1037,7 @@ function add_condition_box(stg,id,i)
 		//
 		
 		card_html+='<div class="dmb-splitter-name" style="border-bottom: 0px;">'
-		card_html+='<p class="dmb-splitter-name-main">'+digi_name+'</p>'
+		card_html+='<p class="dmb-splitter-name-main" '+(digi_maintext_stuff)+'>'+digi_name+'</p>'
 		card_html+='</div>'
 		card_html+='</div>'
 		
@@ -1051,6 +1051,7 @@ function add_condition_box(stg,id,i)
 	}
 	if (typeof data.digimon[stg][id].evos[i].alt === 'undefined' || data.digimon[stg][id].evos[i].alt === null)
 	{
+		var digi_maintext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].digimon)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].digimon+"'")+')" onmouseleave="subtext_exit(this)"'
 		card_html+='<div class="non-unlockable-mon">'
 		card_html+='<div class="dmb-splitter">'
 		//
@@ -1073,7 +1074,7 @@ function add_condition_box(stg,id,i)
 		//
 		card_html+='<div class="dmb-splitter-name">'
 		
-		card_html+='<p class="dmb-splitter-name-main">'+(digi_name)+'</p>'
+		card_html+='<p class="dmb-splitter-name-main" '+(digi_maintext_stuff)+'>'+(digi_name)+'</p>'
 		card_html+='</div>'
 		card_html+='</div>'
 		card_html+='<div onmouseleave="attr_exit()" class="dmb-conditions">'
@@ -1091,6 +1092,7 @@ function add_condition_box(stg,id,i)
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.eng;
 		if (lang==2 && data.digimon[temp_data.stg][temp_data.id].localization.jp!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.jp;
+		var digi_maintext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].digimon)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].digimon+"'")+')" onmouseleave="subtext_exit(this)"'
 		var digi_subtext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].alt)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].alt+"'")+')" onmouseleave="subtext_exit(this)"'
 		card_html+='<div class="unlockable-mon-upper">'
 		card_html+='<div class="dmb-splitter">'
@@ -1104,8 +1106,7 @@ function add_condition_box(stg,id,i)
 		card_html+='</div>'
 		
 		card_html+='<div class="dmb-splitter-name">'
-		
-		card_html+='<p class="dmb-splitter-name-main">'+(digi_name)+'</p>'
+		card_html+='<p class="dmb-splitter-name-main" '+digi_maintext_stuff+'>'+(digi_name)+'</p>'
 		temp_data=digimon_find(data.digimon[stg][id].evos[i].alt);
 		digi_name=data.digimon[temp_data.stg][temp_data.id].name
 		if (lang==1 && data.digimon[temp_data.stg][temp_data.id].localization.eng!="")
@@ -1152,22 +1153,22 @@ function add_conditions(stg,id,i)
 	if (!(typeof data.digimon[stg][id].evos[i].conditions.care_mistakes === 'undefined' || data.digimon[stg][id].evos[i].conditions.care_mistakes === null))
 	{
 		//console.log(stg,id,i,"Care Mistakes!")
-		cond_str+="<p><strong>"+localize_text("Care Mistakes")+":</strong> "+(data.digimon[stg][id].evos[i].conditions.care_mistakes)+"</p>"
+		cond_str+="<p><span class='condition-caremistakes'>"+localize_text("Care Mistakes")+":</span> "+(data.digimon[stg][id].evos[i].conditions.care_mistakes)+"</p>"
 	}
 	if (!(typeof data.digimon[stg][id].evos[i].conditions.effort === 'undefined' || data.digimon[stg][id].evos[i].conditions.effort === null))
 	{
 		//console.log(stg,id,i,"Effort!")
-		cond_str+="<p><strong>"+localize_text("Effort")+":</strong> "+(data.digimon[stg][id].evos[i].conditions.effort)+"</p>"
+		cond_str+="<p><span class='condition-effortlvl'>"+localize_text("Effort")+":</span> "+(data.digimon[stg][id].evos[i].conditions.effort)+"</p>"
 	}
 	if (!(typeof data.digimon[stg][id].evos[i].conditions.level === 'undefined' || data.digimon[stg][id].evos[i].conditions.level === null))
 	{
 		//console.log(stg,id,i,"Level!")
-		cond_str+="<p><strong>"+localize_text("Level")+":</strong> "+(data.digimon[stg][id].evos[i].conditions.level)+"</p>"
+		cond_str+="<p><span class='condition-effortlvl'>"+localize_text("Level")+":</span> "+(data.digimon[stg][id].evos[i].conditions.level)+"</p>"
 	}
 	if (!(typeof data.digimon[stg][id].evos[i].conditions.battle_wins === 'undefined' || data.digimon[stg][id].evos[i].conditions.battle_wins === null))
 	{
 		//console.log(stg,id,i,"Battle Wins!")
-		cond_str+="<p><strong>"+localize_text("Battle Wins")+":</strong> "+(data.digimon[stg][id].evos[i].conditions.battle_wins)+"</p>"
+		cond_str+="<p><span class='condition-jogressbattle'>"+localize_text("Battle Wins")+":</span> "+(data.digimon[stg][id].evos[i].conditions.battle_wins)+"</p>"
 	}
 	if (!(typeof data.digimon[stg][id].evos[i].conditions.jogress === 'undefined' || data.digimon[stg][id].evos[i].conditions.jogress === null))
 	{
@@ -1189,7 +1190,7 @@ function add_conditions(stg,id,i)
 			//jogress_str+=" <span class='help-text' title='"+(jogress_note)+"'>(?)</span>"
 			jogress_str+="<br><sub><em>"+(jogress_note)+"</em></sub>"
 		}
-		cond_str+="<p onmouseleave='attr_exit()'><strong>"+localize_text("Jogress")+":</strong> "+(jogress_str)+"</p>"
+		cond_str+="<p onmouseleave='attr_exit()'><span class='condition-jogressbattle'>"+localize_text("Jogress")+":</span> "+(jogress_str)+"</p>"
 	}
 	return cond_str;
 }
@@ -1479,12 +1480,16 @@ function show_info()
 	box_right=document.querySelector(".box-right");
 	box_right.style.display="flex";
 	box_right=document.querySelector(".cover");
-	box_right.style.display="block";	
+	box_right.style.display="block";
+	box_right=document.querySelector("#rema-box");
+	box_right.style.display="block";
 }
 
 function hide_info()
 {
 	//console.log("Calls on Hide!");
+	box_right=document.querySelector("#rema-box");
+	box_right.style.display="";	
 }
 
 function cover_click()
@@ -1492,6 +1497,8 @@ function cover_click()
 	box_right=document.querySelector(".box-right");
 	box_right.style.display="";
 	box_right=document.querySelector(".cover");
+	box_right.style.display="";	
+	box_right=document.querySelector("#rema-box");
 	box_right.style.display="";	
 	
 	box_select.stg=-1
@@ -1509,4 +1516,53 @@ function bottom_click()
 {
 	if (mobile_mode()==true)
 		cover_click();
+}
+
+function rema_fix()
+{
+	var rema_box,rema_loc,box_right;
+	var b_box,b_loc,b_right;
+	var h;
+	//console.log("REMAMON!!!");
+	rema_box=document.querySelector("#rema-box");
+	rema_loc=document.querySelector("#evo-list");
+	box_right=document.querySelector(".box-right");
+	
+	if ((rema_box!=null) && (rema_loc!=null) && (box_right!=null))
+	{
+		if (box_right.scrollTop==0)
+		{
+			//console.log("REA");
+			b_box=rema_box.getBoundingClientRect();
+			b_loc=rema_loc.getBoundingClientRect();
+			b_right=box_right.getBoundingClientRect();
+			//console.log(b_loc.top,b_loc.left);
+			//console.log(rema_box.style);
+			rema_box.style.top=((b_loc.bottom)+(window.scrollY))+"px";
+			rema_box.style.left=(0)+"px";
+			if (mobile_mode()==1)
+				rema_box.style.left+="50%";
+			rema_box.style.width=calc_dist(b_right.left,b_right.right)+"px";
+			rema_box.style.height="0px";
+			h=(calc_dist((b_loc.bottom),(b_right.bottom-8)+box_right.scrollTop));
+			rema_box.style.height="0px";
+			//console.log(box_right.scrollTop);
+			if (h>0)
+				rema_box.style.height=h+"px";
+			if (mobile_mode()==0)
+				rema_box.style.width="0px";
+		}
+		else
+		{
+			rema_box.style.width="0px";
+			rema_box.style.height="0px";
+			rema_box.style.top="0px";
+			rema_box.style.left="0px";
+		}
+	}
+}
+
+function try_scroll()
+{
+	rema_fix();
 }
