@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="assets/wgz_style.css">
 	<script src="assets/scripts.js"></script>
 </head>
-<body onresize="render_resize()">
+<body onresize="render_resize()" onscroll="try_scroll()">
 	<div class="no-css">
 		<h1>Hi There!</h1>
 		<p>You were not supposed to see this, so this means the CSS isn't working.</p>
@@ -19,6 +19,7 @@
 	<div class="box-cover"></div>
 	<div class="cover" onclick="cover_click()"></div>
 	<div class="imdummy"></div>
+	<div id="rema-box" onclick="bottom_click()"></div>
 	<div class="container">
 		<div class="content">
 					<div class="box">
@@ -30,11 +31,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="box-right">
+						<div class="box-right" onscroll="rema_fix()">
 							<div id="digi-cards">
 								<div id="digimon-profile"></div>
 								<div id="evo-list">
 								</div>
+								<div id="rema-loc"></div>
 							</div>
 						</div>
 					</div>
@@ -52,7 +54,7 @@
 	no_css_init();
 	dataload_digimon();
 	rescale_boxes();
-	render();
+	render(0);
 	document.resize = function(e)
 	{
 		//console.log("?");
