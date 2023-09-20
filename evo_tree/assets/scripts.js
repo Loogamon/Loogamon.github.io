@@ -851,6 +851,9 @@ function digimon_card_init()
 	card_html+='<h2 id="dm-card-name">???</h2>'
 	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???">'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <span id="dm-card-attr">???</span></p>'
+	//card_html+='<div class="card-box-eye">'
+	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree"">'
+	//card_html+="</div>"
 	card_html+="</div>"
 	card_box.innerHTML=card_html;
 }
@@ -859,15 +862,22 @@ function card_render()
 {
 	if (show_calls)
 		console.log("CALL card_render()");
-	var card_box,box_right,digi_profile;
+	var card_box,box_right,box_cover,digi_profile;
 	var card_html="";
 	var sel,done;
+	var body;
 	done=0;
+	body=document.querySelector("body");
 	box_right=document.querySelector(".box-right");
+	box_cover=document.querySelector(".cover");
+	box_cover.style.backgroundColor="rgb(0,0,0)";
+	//box_cover.style.opacity=0.5;
 	card_box=document.querySelector("#digi-cards");
 	digi_profile=document.querySelector("#digimon-profile");
 	card_box.style.display="none";
 	digi_profile.style.display="none";
+	body.style.height="";
+	body.style.overflow="";
 	if (box_select.id==-1 && box_select.stg==-1)
 	{
 		//console.log("So what?",box_select.id)
@@ -875,11 +885,18 @@ function card_render()
 		box_right.style.opacity=0;
 		//card_box.innerHTML=card_html;
 		done=1;
+		//console.log(body);
 		if (box_select.random==1)
 			done=0;
 	}
 	if (done)
 		return;
+	//console.log(body);
+	if (mobile_mode()==true)
+	{
+		body.style.height="100%";
+		body.style.overflow="hidden";
+	}
 	var digi_name,digi_art,digi_attr,stg,id;
 	stg=box_select.stg;
 	id=box_select.id;
@@ -983,6 +1000,16 @@ function render_resize()
 	box_update();
 	render(0);
 	rema_fix();
+	var bug_cover;
+	bug_cover=document.querySelector(".cover");
+	if (box_select.stg==-1 && box_select.id==-1 && mobile_mode()==1)
+	{
+		//This is really is an obscure bug.
+		cover_click();
+		//bug_cover.style.display="";	
+		//bug_cover=document.querySelector("#rema-box");
+		//bug_cover.style.display="";	
+	}
 }
 
 function add_note_box(note,caption)
@@ -1000,6 +1027,7 @@ function add_note_box(note,caption)
 	card_html+="<p>"+note+"</p>"
 	card_html+='</div>'
 	card_html+='</div>\n'
+	card_html+='<img id="random-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree"">'
 	card_html+="</div>"
 	return card_html;
 }
@@ -1494,6 +1522,8 @@ function hide_info()
 
 function cover_click()
 {
+	if (mobile_mode()==false)
+		return;
 	box_right=document.querySelector(".box-right");
 	box_right.style.display="";
 	box_right=document.querySelector(".cover");
@@ -1565,4 +1595,50 @@ function rema_fix()
 function try_scroll()
 {
 	rema_fix();
+}
+
+function visible_button()
+{
+	var box_right,box_cover;
+	var opa;
+	const DIVI=3;
+	if (mobile_mode()==true)
+	{
+		//alert("LMAO");
+		box_right=document.querySelector(".box-right");
+		box_cover=document.querySelector(".cover");
+		opa=box_right.style.opacity;
+		opa=1;
+		if (opa==1)
+		{
+			opa=0.05;
+			box_cover.style.backgroundColor="rgb(255,255,255)";
+			//box_cover.style.opacity=0.5/DIVI;
+		}
+		else
+		{
+			opa=1;
+			box_cover.style.backgroundColor="rgb(0,0,0)";
+			//box_cover.style.opacity=0.5;
+		}
+		box_right.style.opacity=opa;
+	}
+}
+
+function visible_button_up()
+{
+	var box_right,box_cover;
+	var box_right,box_cover;
+	var opa;
+	if (mobile_mode()==true)
+	{
+		//alert("LMAO");
+		box_right=document.querySelector(".box-right");
+		box_cover=document.querySelector(".cover");
+		opa=box_right.style.opacity;
+		opa=1;
+		box_cover.style.backgroundColor="rgb(0,0,0)";
+		//box_cover.style.opacity=0.5/DIVI;
+		box_right.style.opacity=opa;
+	}
 }
