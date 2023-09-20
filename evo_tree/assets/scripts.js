@@ -876,6 +876,7 @@ function card_render()
 	digi_profile=document.querySelector("#digimon-profile");
 	card_box.style.display="none";
 	digi_profile.style.display="none";
+	body.style.width="";
 	body.style.height="";
 	body.style.overflow="";
 	if (box_select.id==-1 && box_select.stg==-1)
@@ -894,6 +895,7 @@ function card_render()
 	//console.log(body);
 	if (mobile_mode()==true)
 	{
+		body.style.width="100%";
 		body.style.height="100%";
 		body.style.overflow="hidden";
 	}
