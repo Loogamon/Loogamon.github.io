@@ -1153,6 +1153,10 @@
 			"localization": {
 				"eng": "Gatomon",
 				"jp": "テイルモン"
+			},
+			"image": {
+				"sprite": "spr_tailmon.png",
+				"art": "art_tailmon.jpg"
 			}
 		},
 		{
@@ -1160,6 +1164,10 @@
 			"localization": {
 				"eng": "EmperorGreymon",
 				"jp": "カイゼルグレイモン"
+			},
+			"image": {
+				"sprite": "spr_kaiser_greymon.png",
+				"art": "art_kaiser_greymon.jpg"
 			}
 		},
 		{
@@ -1167,6 +1175,10 @@
 			"localization": {
 				"eng": "WarGreymon",
 				"jp": "ウォーグレイモン"
+			},
+			"image": {
+				"sprite": "spr_war_greymon.png",
+				"art": "art_war_greymon.jpg"
 			}
 		},
 		{
@@ -1174,6 +1186,10 @@
 			"localization": {
 				"eng": "",
 				"jp": "インペリアルドラモン：ファイターモード"
+			},
+			"image": {
+				"sprite": "spr_imperialdramon_fighter_mode.png",
+				"art": "art_imperialdramon_fighter_mode.jpg"
 			}
 		}
 	],
