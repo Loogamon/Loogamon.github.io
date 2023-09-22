@@ -873,9 +873,9 @@ function digimon_card_init()
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
 	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???">'
-	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="assets/ico_free_clr.png" alt="" draggable="false" oncontextmenu="return false"><span id="dm-card-attr">???</span></p>'
+	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="assets/ico_free_clr.png" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"none"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
-	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree"">'
+	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"none"+'">'
 	//card_html+="</div>"
 	card_html+="</div>"
 	card_box.innerHTML=card_html;
@@ -1272,13 +1272,13 @@ function add_conditions(stg,id,i)
 			attribute_jogress=1;
 		if (!attribute_jogress)
 		{
-			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
+			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
 		}
 		//console.log(data.digimon[stg][id].evos[i].conditions.jogress,attribute_jogress);
-		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
-		jogress_str=jogress_str.replace("Virus","<img class='dmb-conditions-attr-icon' src='assets/ico_virus_clr.png' alt='"+localize_text("Virus")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.virus)+';'+"' onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
-		jogress_str=jogress_str.replace("Data","<img class='dmb-conditions-attr-icon' src='assets/ico_data_clr.png' alt='"+localize_text("Data")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.data)+';'+"' onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
-		jogress_str=jogress_str.replace("Free","<img class='dmb-conditions-attr-icon' src='assets/ico_free_clr.png' alt='"+localize_text("Free")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.free)+';'+"' onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
+		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
+		jogress_str=jogress_str.replace("Virus","<img class='dmb-conditions-attr-icon' src='assets/ico_virus_clr.png' alt='"+localize_text("Virus")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.virus)+';'+"' onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
+		jogress_str=jogress_str.replace("Data","<img class='dmb-conditions-attr-icon' src='assets/ico_data_clr.png' alt='"+localize_text("Data")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.data)+';'+"' onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
+		jogress_str=jogress_str.replace("Free","<img class='dmb-conditions-attr-icon' src='assets/ico_free_clr.png' alt='"+localize_text("Free")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.free)+';'+"' onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
 		if (attribute_jogress && data.device.jogress_anylevel==false)
 		{
 			//jogress_str+=" <span class='help-text' title='"+(jogress_note)+"'>(?)</span>"
@@ -1657,7 +1657,7 @@ function rema_fix()
 			rema_box.style.left=(0)+"px";
 			if (mobile_mode()==1)
 				rema_box.style.left+="50%";
-			rema_box.style.width=calc_dist(b_right.left,b_right.right)+"px";
+			rema_box.style.width=calc_dist(b_right.left,b_right.right+24)+"px";
 			rema_box.style.height="0px";
 			h=(calc_dist((b_loc.bottom),(b_right.bottom-8)+box_right.scrollTop));
 			rema_box.style.height="0px";
