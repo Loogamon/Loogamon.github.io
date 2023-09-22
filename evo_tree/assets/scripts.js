@@ -1274,7 +1274,7 @@ function add_conditions(stg,id,i)
 			attribute_jogress=1;
 		if (!attribute_jogress)
 		{
-			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
+			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
 		}
 		//console.log(data.digimon[stg][id].evos[i].conditions.jogress,attribute_jogress);
 		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
