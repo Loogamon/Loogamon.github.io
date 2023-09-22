@@ -22,6 +22,7 @@ var random_list=[];
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var lock_clickbox=false;
 var timeout=undefined; 
+var timeout2=undefined; 
 var preload=new Image();
 var query_search = window.location.search;
 const query_params = new URLSearchParams(query_search);
@@ -626,6 +627,7 @@ function box_click(element,stg,digi,sp)
 	box_right.scrollTop = 0;
 	box_update();
 	rema_fix();
+	blink_box();
 }
 
 function box_down(element,stg,digi)
@@ -716,6 +718,7 @@ function random_line()
 	var pick;
 	var p_stg,p_id;
 	var digimon = new Object();
+	blink_box();
 	box_select.stg=-1
 	box_select.id=-1;
 	box_select.random=1;
@@ -879,7 +882,7 @@ function digimon_card_init()
 	card_box=document.querySelector("#digimon-profile");
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
-	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'" onload="img_reload()">'
+	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'">'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"'none'"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"'none'"+'">'
@@ -1751,6 +1754,24 @@ function unlock_click()
 {
 	lock_clickbox=false;
 	clearTimeout(timeout);
+}
+
+function blink_box()
+{
+	var item;
+	item=document.querySelector("#digi-cards");
+	item.style.opacity=0;
+	//lock_clickbox=true;
+	timeout2=setTimeout(unblink_box, 90);
+}
+
+function unblink_box()
+{
+	var item;
+	item=document.querySelector("#digi-cards");
+	item.style.opacity=1;
+	//lock_clickbox=false;
+	clearTimeout(timeout2);
 }
 
 function preload_digimon()
