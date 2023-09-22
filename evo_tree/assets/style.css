@@ -12,6 +12,8 @@
 body {
 	/*background-image: url("assets/wg2.png");*/
 	color: white;
+	width: 100%;
+	height: 100%;
 }
 
 .background {
@@ -31,9 +33,11 @@ body {
 
 .cover {
 	display: none;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
 	background-color: black;
 	opacity: 0;
 }
@@ -254,6 +258,20 @@ body {
 	margin-top: 10px;
 }
 
+#dm-card-attr-icon  {
+	display: inline;
+	position: relative;
+	top: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 20px;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 #dm-card-name {
 	/*font-size: 1.3em;*/
 	font-size: 125%;
@@ -367,6 +385,34 @@ body {
 .dmb-conditions-attr {
 	text-decoration: underline dotted;
 	cursor: help;
+}
+
+.dmb-conditions-attr-icon  {
+	display: inline;
+	position: relative;
+	top: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 16px;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.dmb-conditions-digimon-icon  {
+	display: inline;
+	position: relative;
+	top: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 16px;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .condition-caremistakes {

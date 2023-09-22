@@ -1,6 +1,16 @@
 const auto_refresh=false;
 const debug_title=false;
 const show_calls=false;
+//
+const clr={
+	atr: { 
+		virus: "#FF5988",
+		vaccine: "#667AFF",
+		data: "#FF9F29",
+		free: "#808080"
+	}
+};
+//
 
 var lang=0;
 var digimon_count,evo_rows,evo_columns;
@@ -10,6 +20,8 @@ var box_select={stg: -1, id: -1, random: 0};
 var box_status=[];
 var random_list=[];
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var lock_clickbox=false;
+var timeout=undefined; 
 digimon_count=[];
 //I really didn't need to make six different variables just for lines, but eh.
 evo_rows=[];
@@ -531,7 +543,7 @@ function dataload_digimon()
 			digimon_box.title=data.digimon[stg][i].name;
 			if (debug_title)
 				digimon_box.title+=" ("+stg+", "+i+")"
-			digimon_box.setAttribute("onclick",'box_click(this,'+(stg)+','+(i)+')');
+			digimon_box.setAttribute("onclick",'box_click(this,'+(stg)+','+(i)+',0)');
 			digimon_box.setAttribute("onmouseenter",'box_enter(this,'+(stg)+','+(i)+')');
 			digimon_box.setAttribute("onmouseleave",'box_exit(this,'+(stg)+','+(i)+')');
 			digimon_box.setAttribute("onmousedown",'box_down(this,'+(stg)+','+(i)+')');
@@ -557,8 +569,19 @@ function box_enter(element,stg,digi)
 	render(0);
 }
 
-function box_click(element,stg,digi)
+function box_click(element,stg,digi,sp)
 {
+	if (sp==0)
+	{
+		if (lock_clickbox==false & mobile_mode()==true)
+			lock_click();
+	}
+	if (sp==1)
+	{
+		if (lock_clickbox & mobile_mode()==true)
+			return;
+		lock_click();
+	}
 	if (show_calls)
 		console.log("CLICK")
 	attr_exit();
@@ -850,7 +873,7 @@ function digimon_card_init()
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
 	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???">'
-	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <span id="dm-card-attr">???</span></p>'
+	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="assets/ico_free_clr.png" alt="" draggable="false" oncontextmenu="return false"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree"">'
 	//card_html+="</div>"
@@ -871,6 +894,8 @@ function card_render()
 	box_right=document.querySelector(".box-right");
 	box_cover=document.querySelector(".cover");
 	box_cover.style.backgroundColor="rgb(0,0,0)";
+	box_cover.style.backdropFilter="";
+	box_cover.style.mixBlendMode="";
 	//box_cover.style.opacity=0.5;
 	card_box=document.querySelector("#digi-cards");
 	digi_profile=document.querySelector("#digimon-profile");
@@ -923,6 +948,44 @@ function card_render()
 		sel=document.querySelector("#dm-card-attr");
 		sel.innerText=localize_text(digi_attr);
 		digi_profile.style.display="block";
+		sel.style.color="";
+		
+		sel=document.querySelector("#dm-card-attr-icon");
+		sel.style.display="none";
+		switch(digi_attr)
+		{
+			case "Vaccine":
+				sel.src="assets/ico_vaccine_clr.png";
+				sel.alt=localize_text(digi_attr);
+				sel.style.display="";
+				sel=document.querySelector("#dm-card-attr");
+				sel.style.color=clr.atr.vaccine;
+			break;
+			
+			case "Data":
+				sel.src="assets/ico_data_clr.png";
+				sel.alt=localize_text(digi_attr);
+				sel.style.display="";
+				sel=document.querySelector("#dm-card-attr");
+				sel.style.color=clr.atr.data;
+			break;
+			
+			case "Virus":
+				sel.src="assets/ico_virus_clr.png";
+				sel.alt=localize_text(digi_attr);
+				sel.style.display="";
+				sel=document.querySelector("#dm-card-attr");
+				sel.style.color=clr.atr.virus;
+			break;
+			
+			case "Free":
+				sel.src="assets/ico_free_clr.png";
+				sel.alt=localize_text(digi_attr);
+				sel.style.display="";
+				sel=document.querySelector("#dm-card-attr");
+				sel.style.color=clr.atr.free;
+			break;
+		}
 		
 		sel=document.querySelector("#dm-card-attr-txt");
 		sel.innerText=(localize_text("Attribute"))+":";
@@ -966,6 +1029,7 @@ function card_render()
 
 function render_resize()
 {
+	unlock_click();
 	if (show_calls)
 		console.log("CALL render_resize()");
 	width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -1004,7 +1068,7 @@ function render_resize()
 	rema_fix();
 	var bug_cover;
 	bug_cover=document.querySelector(".cover");
-	if (box_select.stg==-1 && box_select.id==-1 && mobile_mode()==1)
+	if (box_select.stg==-1 && box_select.id==-1 && box_select.random==0 && mobile_mode()==1)
 	{
 		//This is really is an obscure bug.
 		cover_click();
@@ -1058,7 +1122,7 @@ function add_condition_box(stg,id,i)
 		if (lang==2 && data.digimon[stg][id].localization.jp!="")
 			digi_name=data.digimon[stg][id].localization.jp;
 		
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+',1)" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
 		spr=data.digimon[stg][id].image.sprite;
 		card_html+='<div title="'+(digi_name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
 		card_html+="'digimon_art/"+spr+"')"
@@ -1095,7 +1159,7 @@ function add_condition_box(stg,id,i)
 		if (lang==2 && data.digimon[temp_data.stg][temp_data.id].localization.jp!="")
 			digi_name=data.digimon[temp_data.stg][temp_data.id].localization.jp;
 		
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+',1)" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
 		spr=data.digimon[t_stg][t_id].image.sprite;
 		card_html+='<div title="'+(digi_name)+'" class="digimon-box-card" '+digi_box_stuff+' style="background-image: url('
 		card_html+="'digimon_art/"+spr+"')"
@@ -1126,7 +1190,7 @@ function add_condition_box(stg,id,i)
 		var digi_subtext_stuff='onclick="subtext_click('+("'"+data.digimon[stg][id].evos[i].alt)+"'"+')" onmouseenter="subtext_enter(this,'+("'"+data.digimon[stg][id].evos[i].alt+"'")+')" onmouseleave="subtext_exit(this)"'
 		card_html+='<div class="unlockable-mon-upper">'
 		card_html+='<div class="dmb-splitter">'
-		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+')" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
+		digi_box_stuff='onclick="box_click(this,'+(t_stg)+','+(t_id)+',1)" onmouseenter="minibox_enter(this,'+(t_stg)+','+(t_id)+')" onmouseleave="minibox_exit(this)" onmousedown="minibox_down(this)" onmouseup="minibox_enter(this)"'
 		spr=data.digimon[t_stg][t_id].image.sprite;
 		
 		card_html+='<div class="dmb-splitter-sprite">'
@@ -1208,13 +1272,13 @@ function add_conditions(stg,id,i)
 			attribute_jogress=1;
 		if (!attribute_jogress)
 		{
-			jogress_str=localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
+			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
 		}
 		//console.log(data.digimon[stg][id].evos[i].conditions.jogress,attribute_jogress);
-		jogress_str=jogress_str.replace("Vaccine","<span onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
-		jogress_str=jogress_str.replace("Virus","<span onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
-		jogress_str=jogress_str.replace("Data","<span onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
-		jogress_str=jogress_str.replace("Free","<span onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
+		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
+		jogress_str=jogress_str.replace("Virus","<img class='dmb-conditions-attr-icon' src='assets/ico_virus_clr.png' alt='"+localize_text("Virus")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.virus)+';'+"' onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
+		jogress_str=jogress_str.replace("Data","<img class='dmb-conditions-attr-icon' src='assets/ico_data_clr.png' alt='"+localize_text("Data")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.data)+';'+"' onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
+		jogress_str=jogress_str.replace("Free","<img class='dmb-conditions-attr-icon' src='assets/ico_free_clr.png' alt='"+localize_text("Free")+"' draggable='false' oncontextmenu='return false'>"+"<span style='"+'color: '+(clr.atr.free)+';'+"' onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
 		if (attribute_jogress && data.device.jogress_anylevel==false)
 		{
 			//jogress_str+=" <span class='help-text' title='"+(jogress_note)+"'>(?)</span>"
@@ -1407,6 +1471,21 @@ function localize_external_digimon(digi_name)
 	return digi_name;
 }
 
+function external_digimon_sprite(digi_name)
+{
+	var digi_str,digi_img;
+	var ex_find;
+	digi_img="spr_unknown.png";
+	ex_find=external_digimon_find(digi_name);
+	if (ex_find!=-1)
+	{
+		if (data.external_digimon[ex_find].image.sprite!="")
+			digi_img=data.external_digimon[ex_find].image.sprite;
+	}
+	return digi_img;
+}
+
+
 function localize_text(str_text)
 {
 	var res;
@@ -1524,6 +1603,10 @@ function hide_info()
 
 function cover_click()
 {
+	if (lock_clickbox & mobile_mode()==true)
+		return;
+	lock_click();
+	
 	if (mobile_mode()==false)
 		return;
 	box_right=document.querySelector(".box-right");
@@ -1614,13 +1697,17 @@ function visible_button()
 		if (opa==1)
 		{
 			opa=0.05;
-			box_cover.style.backgroundColor="rgb(255,255,255)";
+			box_cover.style.backgroundColor="rgb(63,63,)";
+			box_cover.style.backdropFilter="blur(0px)";
+			box_cover.style.mixBlendMode="overlay";
 			//box_cover.style.opacity=0.5/DIVI;
 		}
 		else
 		{
 			opa=1;
 			box_cover.style.backgroundColor="rgb(0,0,0)";
+			box_cover.style.backdropFilter="";
+			box_cover.style.mixBlendMode="";
 			//box_cover.style.opacity=0.5;
 		}
 		box_right.style.opacity=opa;
@@ -1640,7 +1727,21 @@ function visible_button_up()
 		opa=box_right.style.opacity;
 		opa=1;
 		box_cover.style.backgroundColor="rgb(0,0,0)";
+		box_cover.style.backdropFilter="";
+		box_cover.style.mixBlendMode="";
 		//box_cover.style.opacity=0.5/DIVI;
 		box_right.style.opacity=opa;
 	}
+}
+
+function lock_click()
+{
+	lock_clickbox=true;
+	timeout=setTimeout(unlock_click, 350);
+}
+
+function unlock_click()
+{
+	lock_clickbox=false;
+	clearTimeout(timeout);
 }
