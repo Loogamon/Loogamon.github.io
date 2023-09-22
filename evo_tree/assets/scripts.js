@@ -22,6 +22,8 @@ var random_list=[];
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var lock_clickbox=false;
 var timeout=undefined; 
+var preload=new Image();
+preload.src="assets/art_unknown.jpg";
 digimon_count=[];
 //I really didn't need to make six different variables just for lines, but eh.
 evo_rows=[];
@@ -1275,10 +1277,10 @@ function add_conditions(stg,id,i)
 			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
 		}
 		//console.log(data.digimon[stg][id].evos[i].conditions.jogress,attribute_jogress);
-		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
-		jogress_str=jogress_str.replace("Virus","<img class='dmb-conditions-attr-icon' src='assets/ico_virus_clr.png' alt='"+localize_text("Virus")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.virus)+';'+"' onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
-		jogress_str=jogress_str.replace("Data","<img class='dmb-conditions-attr-icon' src='assets/ico_data_clr.png' alt='"+localize_text("Data")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.data)+';'+"' onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
-		jogress_str=jogress_str.replace("Free","<img class='dmb-conditions-attr-icon' src='assets/ico_free_clr.png' alt='"+localize_text("Free")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.free)+';'+"' onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
+		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
+		jogress_str=jogress_str.replace("Virus","<img class='dmb-conditions-attr-icon' src='assets/ico_virus_clr.png' alt='"+localize_text("Virus")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+"<span style='"+'color: '+(clr.atr.virus)+';'+"' onmouseenter='attr_enter("+'"Virus"'+")' class='dmb-conditions-attr'>"+localize_text("Virus")+"</span>");
+		jogress_str=jogress_str.replace("Data","<img class='dmb-conditions-attr-icon' src='assets/ico_data_clr.png' alt='"+localize_text("Data")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+"<span style='"+'color: '+(clr.atr.data)+';'+"' onmouseenter='attr_enter("+'"Data"'+")' class='dmb-conditions-attr'>"+localize_text("Data")+"</span>");
+		jogress_str=jogress_str.replace("Free","<img class='dmb-conditions-attr-icon' src='assets/ico_free_clr.png' alt='"+localize_text("Free")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+"'>"+"<span style='"+'color: '+(clr.atr.free)+';'+"' onmouseenter='attr_enter("+'"Free"'+")' class='dmb-conditions-attr'>"+localize_text("Free")+"</span>");
 		if (attribute_jogress && data.device.jogress_anylevel==false)
 		{
 			//jogress_str+=" <span class='help-text' title='"+(jogress_note)+"'>(?)</span>"
