@@ -23,6 +23,8 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var lock_clickbox=false;
 var timeout=undefined; 
 var preload=new Image();
+var query_search = window.location.search;
+const query_params = new URLSearchParams(query_search);
 preload.src="assets/art_unknown.jpg";
 digimon_count=[];
 //I really didn't need to make six different variables just for lines, but eh.
@@ -779,6 +781,7 @@ function random_line()
 	box_update();
 	show_info();
 	render(0);
+	rema_fix();
 	//console.log(random_list);
 }
 
@@ -1107,7 +1110,7 @@ function add_condition_box(stg,id,i)
 	var spr,t_stg,t_id;
 	var temp_data;
 	var digi_name="";
-	spr="spr_unknown.png";
+	spr="";
 	card_html+='<div onmouseleave="attr_exit()" class="card-box" style="padding: 0px">'
 	if (i==-1)
 	{
@@ -1477,7 +1480,7 @@ function external_digimon_sprite(digi_name)
 {
 	var digi_str,digi_img;
 	var ex_find;
-	digi_img="spr_unknown.png";
+	digi_img="";
 	ex_find=external_digimon_find(digi_name);
 	if (ex_find!=-1)
 	{
@@ -1746,4 +1749,37 @@ function unlock_click()
 {
 	lock_clickbox=false;
 	clearTimeout(timeout);
+}
+
+function preload_digimon()
+{
+	var digi_name,digi_lang,lb;
+	var digi;
+	digi_name=query_params.get('digimon')
+	if (digi_name!=null)
+	{
+		//console.log("There's something. Cool. Is it "+digi_name+"?");
+		digi=digimon_find(digi_name);
+		//console.log(digi);
+		if (digi.stg!=-1 && digi.id!=-1)
+		{
+			//box_select.stg=digi.stg;
+			//box_select.id=digi.id;
+			
+			box_click(null,digi.stg,digi.id,1);
+		}
+	}
+	digi_lang=query_params.get('l')
+	lb=document.querySelector("#lang_selector");
+	//console.log(digi_lang);
+	if (lb!=null)
+	{
+		switch (digi_lang)
+		{
+			case "en_dub": lb.value="l_en_dub"; break;
+			case "en_sub": lb.value="l_en_sub"; break;
+			case "jp": lb.value="l_jp"; break;
+		}
+		change_lang(lb);
+	}
 }
