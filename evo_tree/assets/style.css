@@ -242,10 +242,6 @@ body {
 	overflow: hidden;
 }
 
-#digi-cards {
-	
-}
-
 .card-box-digimon {
 	/*height: 150px;*/
 }
@@ -551,7 +547,7 @@ body {
 	margin-right: unset;
 	padding-right: unset;
 	width: 80vw;
-	min-width: 80vw;
+	/*min-width: 80vw;*/
 	height: 100vh;
 	
 	top: 0px;

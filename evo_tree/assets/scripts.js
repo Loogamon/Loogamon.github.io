@@ -872,7 +872,7 @@ function digimon_card_init()
 	card_box=document.querySelector("#digimon-profile");
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
-	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???" onerrorupdate="alert('+"'HI'"+')">'
+	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???" onerrorupdate="this.src='+"'assets/art_unknown.jpg'"+'">'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="assets/ico_free_clr.png" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"none"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"none"+'">'
