@@ -10,7 +10,7 @@ const clr={
 		free: "#808080"
 	}
 };
-//
+//(window.location.origin)+(window.location.pathname) might be useful
 
 var lang=0;
 var digimon_count,evo_rows,evo_columns;
@@ -25,6 +25,8 @@ var timeout=undefined;
 var preload=new Image();
 var query_search = window.location.search;
 const query_params = new URLSearchParams(query_search);
+var ready=0;
+ready=0;
 preload.src="assets/art_unknown.jpg";
 digimon_count=[];
 //I really didn't need to make six different variables just for lines, but eh.
@@ -877,7 +879,7 @@ function digimon_card_init()
 	card_box=document.querySelector("#digimon-profile");
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
-	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'">'
+	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'" onload="img_reload()">'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"'none'"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"'none'"+'">'
@@ -1782,4 +1784,10 @@ function preload_digimon()
 		}
 		change_lang(lb);
 	}
+	ready=1;
+}
+
+function img_reload()
+{
+	alert("HEY LUIGI");
 }
