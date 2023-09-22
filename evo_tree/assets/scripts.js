@@ -872,7 +872,7 @@ function digimon_card_init()
 	card_box=document.querySelector("#digimon-profile");
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
-	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???">'
+	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="digimon_art/art_unknown.jpg" draggable="false" alt="???" onerrorupdate="alert('+"'HI'"+')">'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="assets/ico_free_clr.png" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"none"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"none"+'">'
@@ -1272,7 +1272,7 @@ function add_conditions(stg,id,i)
 			attribute_jogress=1;
 		if (!attribute_jogress)
 		{
-			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
+			jogress_str="<img class='dmb-conditions-digimon-icon' src='digimon_art/"+external_digimon_sprite(data.digimon[stg][id].evos[i].conditions.jogress)+"' alt='"+(localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress))+"' draggable='false' oncontextmenu='return false'>"+localize_external_digimon(data.digimon[stg][id].evos[i].conditions.jogress);
 		}
 		//console.log(data.digimon[stg][id].evos[i].conditions.jogress,attribute_jogress);
 		jogress_str=jogress_str.replace("Vaccine","<img class='dmb-conditions-attr-icon' src='assets/ico_vaccine_clr.png' alt='"+localize_text("Vaccine")+"' draggable='false' oncontextmenu='return false' onerror='this.style.display="+'"none"'+">"+"<span style='"+'color: '+(clr.atr.vaccine)+';'+"' onmouseenter='attr_enter("+'"Vaccine"'+")' class='dmb-conditions-attr'>"+localize_text("Vaccine")+"</span>");
