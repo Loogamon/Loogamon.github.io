@@ -9,6 +9,11 @@
 	font-family: digifont;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	/*background-image: url("assets/wg2.png");*/
 	color: white;
@@ -33,7 +38,7 @@ body {
 
 .cover {
 	display: none;
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	top: 0px;
 	width: 100%;
