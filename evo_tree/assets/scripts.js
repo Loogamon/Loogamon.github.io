@@ -1798,12 +1798,19 @@ function preload_digimon()
 		//console.log("There's something. Cool. Is it "+digi_name+"?");
 		digi=digimon_find(digi_name);
 		//console.log(digi);
-		if (digi.stg!=-1 && digi.id!=-1)
+		if (digi_name=="RANDOM")
 		{
-			//box_select.stg=digi.stg;
-			//box_select.id=digi.id;
-			
-			box_click(null,digi.stg,digi.id,1);
+			random_line();
+		}
+		else
+		{
+			if (digi.stg!=-1 && digi.id!=-1)
+			{
+				//box_select.stg=digi.stg;
+				//box_select.id=digi.id;
+				
+				box_click(null,digi.stg,digi.id,1);
+			}
 		}
 	}
 	digi_lang=query_params.get('l')
