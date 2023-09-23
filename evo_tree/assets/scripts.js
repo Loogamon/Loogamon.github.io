@@ -3,6 +3,7 @@ const debug_title=false;
 const show_calls=false;
 const box_blink=true;
 const debug_remabox=false;
+const display_attrclr=false;
 //
 const clr={
 	atr: { 
@@ -670,6 +671,7 @@ function reset_box_status()
 
 function box_update()
 {
+	var color;
 	for (var stg=0;stg<box_status.length;stg++)
 	{
 		for (var i=0;i<box_status[stg].length;i++)
@@ -683,7 +685,18 @@ function box_update()
 				target.style.boxShadow="0px 0px 10px 3.5px";
 			if (box_status[stg][i].find)
 			{
-				target.style.borderColor="#ADFF2F";
+				color="#ADFF2F";
+				if (display_attrclr)
+				{
+					switch (box_status[stg][i].find)
+					{
+						case 2: color=clr.atr.vaccine; break;
+						case 3: color=clr.atr.virus; break;
+						case 4: color=clr.atr.data; break;
+						case 5: color=clr.atr.free; break;
+					}
+				}
+				target.style.borderColor=color;
 				//if (!box_status[stg][i].glow)
 				//	target.style.boxShadow="0px 0px 10px 3.5px blue";
 			}
@@ -870,6 +883,13 @@ function find_attribute(atr)
 			{
 				count++;
 				box_status[stg][i].find=1;
+				switch(atr)
+				{
+					case "Vaccine": box_status[stg][i].find=2; break;
+					case "Virus": box_status[stg][i].find=3; break;
+					case "Data": box_status[stg][i].find=4; break;
+					case "Free": box_status[stg][i].find=5; break;
+				}
 			}
 		}
 	}
@@ -1085,7 +1105,7 @@ function render_resize()
 		//This is really is an obscure bug.
 		cover_click();
 		//bug_cover.style.display="";	
-		//bug_cover=document.querySelector("#rema-box");
+		//bug_cover=document.querySelector(".rema-box");
 		//bug_cover.style.display="";	
 	}
 }
@@ -1602,14 +1622,14 @@ function show_info()
 	box_right.style.display="flex";
 	box_right=document.querySelector(".cover");
 	box_right.style.display="block";
-	box_right=document.querySelector("#rema-box");
-	box_right.style.display="block";
+	box_right=document.querySelector(".rema-box");
+	box_right.style.display="inline";
 }
 
 function hide_info()
 {
 	//console.log("Calls on Hide!");
-	box_right=document.querySelector("#rema-box");
+	box_right=document.querySelector(".rema-box");
 	box_right.style.display="";	
 }
 
@@ -1625,7 +1645,7 @@ function cover_click()
 	box_right.style.display="";
 	box_right=document.querySelector(".cover");
 	box_right.style.display="";	
-	box_right=document.querySelector("#rema-box");
+	box_right=document.querySelector(".rema-box");
 	box_right.style.display="";	
 	
 	box_select.stg=-1
@@ -1651,7 +1671,7 @@ function rema_fix()
 	var b_box,b_loc,b_right;
 	var h;
 	//console.log("REMAMON!!!");
-	rema_box=document.querySelector("#rema-box");
+	rema_box=document.querySelector(".rema-box");
 	rema_loc=document.querySelector("#evo-list");
 	box_right=document.querySelector(".box-right");
 	

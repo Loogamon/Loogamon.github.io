@@ -519,7 +519,7 @@ body {
 	opacity: 0;
 }
 
-#rema-box{
+.rema-box{
 	position: absolute;
 	width: 10px;
 	height: 10px;
@@ -542,6 +542,10 @@ body {
 
 #random-eye {
 	display: none;
+}
+
+.digimon-box, .digimon-box-card {
+	transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 @media screen and (max-width: 480px) {
@@ -642,7 +646,7 @@ body {
 	box-shadow: 1px 5px 5px black;
 	}
 
-	#rema-box{
+	.rema-box{
 		display: none;
 		left: 0px;
 	}
