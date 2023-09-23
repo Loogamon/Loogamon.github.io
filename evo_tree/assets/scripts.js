@@ -1,6 +1,8 @@
 const auto_refresh=false;
 const debug_title=false;
 const show_calls=false;
+const box_blink=true;
+const debug_remabox=false;
 //
 const clr={
 	atr: { 
@@ -882,7 +884,7 @@ function digimon_card_init()
 	card_box=document.querySelector("#digimon-profile");
 	card_html+='<div class="card-box">'
 	card_html+='<h2 id="dm-card-name">???</h2>'
-	card_html+='<img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'">'
+	card_html+='<div class="dm-card-art-box"><img id="dm-card-art" class="card-box-digimon-img" src="assets/art_unknown.jpg" draggable="false" alt="???" onerror="this.src='+"'assets/art_unknown.jpg'"+'"><div id="dm-card-art-padder"></div></div>'
 	card_html+='<p id="dm-card-attr-out"><span id="dm-card-attr-txt" style="font-weight: bold; color: black;">Attribute:</span> <img id="dm-card-attr-icon" src="" alt="" draggable="false" oncontextmenu="return false" onerror="this.style.display='+"'none'"+'"><span id="dm-card-attr">???</span></p>'
 	//card_html+='<div class="card-box-eye">'
 	card_html+='<img id="digi-eye" ontouchstart="visible_button()" ontouchend="visible_button_up()" ontouchcancel="visible_button_up()" src="assets/visible.png" oncontextmenu="return false" draggable="false" alt="Show Tree" onerror="this.style.display='+"'none'"+'">'
@@ -1655,6 +1657,9 @@ function rema_fix()
 	
 	if ((rema_box!=null) && (rema_loc!=null) && (box_right!=null))
 	{
+		rema_box.style.opacity=0;
+		if (debug_remabox)
+			rema_box.style.opacity=0.5;
 		if (box_right.scrollTop==0)
 		{
 			//console.log("REA");
@@ -1759,8 +1764,15 @@ function unlock_click()
 function blink_box()
 {
 	var item;
+	if (!box_blink)
+		return;
 	item=document.querySelector("#digi-cards");
 	item.style.opacity=0;
+	item=document.querySelector(".box-right");
+	item.style.overflow="hidden";
+	//item.style.opacity=0;
+	//item=document.querySelectorAll(".box-right::-webkit-scrollbar-thumb:hover");
+	
 	//lock_clickbox=true;
 	timeout2=setTimeout(unblink_box, 90);
 }
@@ -1770,6 +1782,8 @@ function unblink_box()
 	var item;
 	item=document.querySelector("#digi-cards");
 	item.style.opacity=1;
+	item=document.querySelector(".box-right");
+	item.style.overflow="";
 	//lock_clickbox=false;
 	clearTimeout(timeout2);
 }

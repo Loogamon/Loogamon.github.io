@@ -1,6 +1,7 @@
 .background {
 	background-image: url("wgz_checkers.png");
-	opacity: 0.2;
+	opacity: 0.5;
+	mix-blend-mode: hue;
 }
 
 .background-inner {
