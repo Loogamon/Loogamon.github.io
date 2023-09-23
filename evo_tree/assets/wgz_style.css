@@ -1,3 +1,7 @@
+.body {
+	background-color: "#84D6FF";
+}
+
 .background {
 	background-image: url("wgz_checkers.png");
 	opacity: 0.5;
