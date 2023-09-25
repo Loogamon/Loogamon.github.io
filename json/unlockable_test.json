@@ -1,0 +1,651 @@
+{
+	"digimon":
+	[
+		[
+			{
+				"name": "Pururumon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "プルルモン"
+				},
+				"image": {
+					"sprite": "spr_pururumon.png",
+					"art": "art_pururumon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Poromon" }
+				]
+			}
+		],
+		[
+			{
+				"name": "Poromon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ポロモン"
+				},
+				"image": {
+					"sprite": "spr_poromon.png",
+					"art": "art_poromon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Gabumon", "alt": "Pomumon", "unlock_notes": "Connect to 2 Different Devices", "unlock_notes_jp": "2 つの異なるデバイスに接続する", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4"
+						}
+					},
+					{ "digimon": "Pomumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-3"
+						}
+					},
+					{ "digimon": "Wolfmon", "alt": "Pomumon", "unlock_notes": "Connect to 2 Different Devices", "unlock_notes_jp": "2 つの異なるデバイスに接続する", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "1"
+						}
+					},
+					{ "digimon": "Tinkermon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0"
+						}
+					},
+					{ "digimon": "Falcomon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Hawkmon", "alt": "Falcomon", "unlock_notes": "Connect to a Different Device", "unlock_notes_jp": "別のデバイスに接続する", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "0-1"
+						}
+					}
+				]
+			}
+		],
+		[
+			{
+				"name": "Falcomon",
+				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ファルコモン"
+				},
+				"image": {
+					"sprite": "spr_falcomon_savers.png",
+					"art": "art_falcomon_savers.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Peckmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "3-4"
+						}
+					},
+					{ "digimon": "Diatrymon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0-2"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "3+"
+						}
+					}
+				]
+			},
+			{
+				"name": "Pomumon",
+				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ポームモン"
+				},
+				"image": {
+					"sprite": "spr_pomumon.png",
+					"art": "art_pomumon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "3+"
+						}
+					}
+				]
+			},
+			{
+				"name": "Tinkermon",
+				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "ティンカーモン"
+				},
+				"image": {
+					"sprite": "spr_tinkermon.png",
+					"art": "art_tinkermon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Petermon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "3-4"
+						}
+					},
+					{ "digimon": "Vegimon", "conditions": 
+						{
+							"care_mistakes": "2+",
+							"effort": "0-2"
+						}
+					}
+				]
+			},
+			{
+				"name": "Hawkmon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "ホークモン"
+				},
+				"image": {
+					"sprite": "spr_hawkmon.png",
+					"art": "art_hawkmon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Aquilamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Peckmon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-1"
+						}
+					},
+					{ "digimon": "Cockatrimon", "conditions": 
+						{
+							"care_mistakes": "2+"
+						}
+					}
+				]
+			},
+			{
+				"name": "Wolfmon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "Lobomon",
+					"jp": "ヴォルフモン"
+				},
+				"image": {
+					"sprite": "spr_wolfmon.png",
+					"art": "art_wolfmon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "2-4"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "1"
+						}
+					},
+					{ "digimon": "Parasaurmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"effort": "0"
+						}
+					},
+					{ "digimon": "Petermon", "conditions": 
+						{
+							"care_mistakes": "3+"
+						}
+					}
+				]
+			},
+			{
+				"name": "Gabumon",
+				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ガブモン"
+				},
+				"image": {
+					"sprite": "spr_gabumon.png",
+					"art": "art_gabumon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4",
+							"battle_wins": "0-49"
+						}
+					},
+					{ "digimon": "Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "3"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "0-2"
+						}
+					},
+					{ "digimon": "Garummon", "conditions": 
+						{
+							"care_mistakes": "2+"
+						}
+					},
+					{ "digimon": "Gabumon -Bond of Friendship-", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"effort": "4",
+							"battle_wins": "50+"
+						}
+					}
+				]
+			}	
+		],
+		[
+			{
+				"name": "Diatrymon",
+				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ディアトリモン"
+				},
+				"image": {
+					"sprite": "spr_diatrymon.png",
+					"art": "art_diatrymon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
+			},
+			{
+				"name": "Peckmon",
+				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ペックモン"
+				},
+				"image": {
+					"sprite": "spr_peckmon.png",
+					"art": "art_peckmon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
+			},
+			{
+				"name": "Vegimon",
+				"attribute": "Virus",
+				"localization": {
+					"eng": "Vegiemon",
+					"jp": "ベジーモン"
+				},
+				"image": {
+					"sprite": "spr_vegimon.png",
+					"art": "art_vegimon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"level": "6"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					},
+					{ "digimon": "Lilamon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					}
+				]
+			},
+			{
+				"name": "Cockatrimon",
+				"attribute": "Data",
+				"localization": {
+					"eng": "Kokatorimon",
+					"jp": "コカトリモン"
+				},
+				"image": {
+					"sprite": "spr_cockatrimon.png",
+					"art": "art_cockatrimon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
+			},
+			{
+				"name": "Parasaurmon",
+				"attribute": "Virus",
+				"localization": {
+					"eng": "",
+					"jp": "パラサウモン"
+				},
+				"image": {
+					"sprite": "spr_parasaurmon.png",
+					"art": "art_parasaurmon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"care_mistakes": "0-1",
+							"level": "5-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Vaccine, Data"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus, Free"
+						}
+					}
+				]
+			},
+			{
+				"name": "Petermon",
+				"attribute": "Data",
+				"localization": {
+					"eng": "",
+					"jp": "ピーターモン"
+				},
+				"image": {
+					"sprite": "spr_petermon.png",
+					"art": "art_petermon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Lilamon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"jogress": "Data"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Entmon", "conditions": 
+						{
+							"jogress": "Virus"
+						}
+					}
+				]
+			},
+			{
+				"name": "Aquilamon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "",
+					"jp": "アクィラモン"
+				},
+				"image": {
+					"sprite": "spr_aquilamon.png",
+					"art": "art_aquilamon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Yatagaramon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Silphymon", "conditions": 
+						{
+							"level": "6",
+							"jogress": "Tailmon"
+						}
+					},
+					{ "digimon": "Hippogriffomon", "conditions": 
+						{
+							"level": "1-5",
+							"jogress": "Tailmon"
+						}
+					},
+					{ "digimon": "Parrotmon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Toropiamon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
+			},
+			{
+				"name": "Garummon",
+				"attribute": "Free",
+				"localization": {
+					"eng": "KendoGarurumon",
+					"jp": "ガルムモン"
+				},
+				"image": {
+					"sprite": "spr_garummon.png",
+					"art": "art_garummon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					},
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					}
+				]
+			},
+			{
+				"name": "Garurumon",
+				"attribute": "Vaccine",
+				"localization": {
+					"eng": "",
+					"jp": "ガルルモン"
+				},
+				"image": {
+					"sprite": "spr_garurumon.png",
+					"art": "art_garurumon.jpg"
+				},
+				"evos":
+				[
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"care_mistakes": "0-2",
+							"level": "4-6"
+						}
+					},
+					{ "digimon": "Were Garurumon", "conditions": 
+						{
+							"jogress": "Vaccine, Free"
+						}
+					},
+					{ "digimon": "Beowolfmon", "conditions": 
+						{
+							"jogress": "Data, Virus"
+						}
+					}
+				]
+			}
+		]
+	],
+	"external_digimon": [
+		{
+			"name": "Tailmon",
+			"localization": {
+				"eng": "Gatomon",
+				"jp": "テイルモン"
+			},
+			"image": {
+				"sprite": "spr_tailmon.png",
+				"art": "art_tailmon.jpg"
+			}
+		},
+		{
+			"name": "Kaiser Greymon",
+			"localization": {
+				"eng": "EmperorGreymon",
+				"jp": "カイゼルグレイモン"
+			},
+			"image": {
+				"sprite": "spr_kaiser_greymon.png",
+				"art": "art_kaiser_greymon.jpg"
+			}
+		},
+		{
+			"name": "War Greymon",
+			"localization": {
+				"eng": "WarGreymon",
+				"jp": "ウォーグレイモン"
+			},
+			"image": {
+				"sprite": "spr_war_greymon.png",
+				"art": "art_war_greymon.jpg"
+			}
+		},
+		{
+			"name": "Imperialdramon: Fighter Mode",
+			"localization": {
+				"eng": "",
+				"jp": "インペリアルドラモン：ファイターモード"
+			},
+			"image": {
+				"sprite": "spr_imperialdramon_fighter_mode.png",
+				"art": "art_imperialdramon_fighter_mode.jpg"
+			}
+		}
+	],
+	"device": {
+		"jogress_anylevel": false,
+		"max_level": [ 0, 0, 0, 6, 8, 10, 0, 0 ],
+		"release_date": "2021-03-17"
+	}
+}
