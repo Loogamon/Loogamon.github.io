@@ -39,12 +39,6 @@
 							"effort": "4"
 						}
 					},
-					{ "digimon": "Pomumon", "conditions": 
-						{
-							"care_mistakes": "0-1",
-							"effort": "2-3"
-						}
-					},
 					{ "digimon": "Wolfmon", "alt": "Pomumon", "unlock_notes": "Connect to 2 Different Devices", "unlock_notes_jp": "2 つの異なるデバイスに接続する", "conditions": 
 						{
 							"care_mistakes": "0-1",
