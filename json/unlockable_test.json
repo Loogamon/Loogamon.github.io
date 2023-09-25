@@ -130,7 +130,7 @@
 							"effort": "0-1"
 						}
 					},
-					{ "digimon": "Vegimon", "conditions": 
+					{ "digimon": "Vegimon", "alt": "Aquilamon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "3+"
 						}
@@ -259,20 +259,20 @@
 				},
 				"evos":
 				[
-					{ "digimon": "Garurumon", "conditions": 
+					{ "digimon": "Garurumon", "alt": "Parasaurmon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "4",
 							"battle_wins": "0-49"
 						}
 					},
-					{ "digimon": "Garurumon", "conditions": 
+					{ "digimon": "Garurumon", "alt": "Please remove this because it's not real", "unlock_notes": "123", "unlock_notes_jp": "ABC", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "3"
 						}
 					},
-					{ "digimon": "Garummon", "conditions": 
+					{ "digimon": "Garummon", "alt": "Diatrymon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "0-2"
