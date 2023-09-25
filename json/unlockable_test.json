@@ -221,7 +221,7 @@
 							"effort": "2-4"
 						}
 					},
-					{ "digimon": "Garummon", "conditions": 
+					{ "digimon": "Garummon", "alt": "Aquilamon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-2",
 							"effort": "1"
