@@ -51,7 +51,7 @@
 							"effort": "0"
 						}
 					},
-					{ "digimon": "Falcomon", "conditions": 
+					{ "digimon": "Falcomon", "alt": "Pomumon", "unlock_notes": "IDK... it's different", "unlock_notes_jp": "別のデバイスに接続する", "conditions":
 						{
 							"care_mistakes": "2+",
 							"effort": "2-4"
