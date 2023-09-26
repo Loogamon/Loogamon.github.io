@@ -124,7 +124,7 @@
 							"effort": "0-1"
 						}
 					},
-					{ "digimon": "Vegimon", "alt": "Aquilamon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
+					{ "digimon": "Vegimon", "alt": "Aquilamon", "unlock_notes": "Good judgement comes from experience. Experience comes from bad judgement.", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "3+"
 						}
@@ -221,7 +221,7 @@
 							"effort": "2-4"
 						}
 					},
-					{ "digimon": "Garummon", "alt": "Aquilamon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
+					{ "digimon": "Garummon", "alt": "Aquilamon", "unlock_notes": "Determine never to be idle...It is wonderful how much may be done if we are always doing.", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-2",
 							"effort": "1"
@@ -253,7 +253,7 @@
 				},
 				"evos":
 				[
-					{ "digimon": "Garurumon", "alt": "Parasaurmon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
+					{ "digimon": "Garurumon", "alt": "Parasaurmon", "unlock_notes": "I feel good about taking things to Goodwill and actually, I do like shopping at Goodwill. It's so cheap that it feels like a library where I am just checking things out for awhile until I decide to take them back.", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "4",
@@ -266,7 +266,7 @@
 							"effort": "3"
 						}
 					},
-					{ "digimon": "Garummon", "alt": "Diatrymon", "unlock_notes": "...", "unlock_notes_jp": "...", "conditions": 
+					{ "digimon": "Garummon", "alt": "Diatrymon", "unlock_notes": "The trouble with being poor is that it takes up all of your time.", "unlock_notes_jp": "...", "conditions": 
 						{
 							"care_mistakes": "0-1",
 							"effort": "0-2"
