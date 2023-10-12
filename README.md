@@ -1,2 +1,2 @@
-# Public Page for HTTP hotlink stuff
-AAAAAAAAAAAA
+# Loogamon's Web Portfolio
+(To be modified upon later.)
